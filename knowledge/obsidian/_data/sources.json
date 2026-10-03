@@ -1,0 +1,662 @@
+[
+  {
+    "id": "occ_cre",
+    "title": "Commercial Real Estate Lending, Comptroller's Handbook version 2.0",
+    "url": "https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/files/commercial-real-estate-lending/pub-ch-commercial-real-estate.pdf",
+    "publisher": "Office of the Comptroller of the Currency",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "occ_refinance",
+    "title": "Commercial Lending: Refinance Risk, Bulletin 2024-29",
+    "url": "https://occ.gov/news-issuances/bulletins/2024/bulletin-2024-29.html",
+    "publisher": "OCC",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "fed_concentration",
+    "title": "Interagency Guidance on Concentrations in Commercial Real Estate Lending",
+    "url": "https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-concentrations-in-commercial-real-estate-lending-sound-risk-management-practices.htm",
+    "publisher": "Federal Reserve",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "cfpb_closing",
+    "title": "Closing Disclosure Explainer",
+    "url": "https://www.consumerfinance.gov/owning-a-home/closing-disclosure/",
+    "publisher": "Consumer Financial Protection Bureau",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "cfpb_documents",
+    "title": "Review Documents Before Closing",
+    "url": "https://www.consumerfinance.gov/owning-a-home/close/review-documents-before-closing/",
+    "publisher": "CFPB",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "cfpb_title",
+    "title": "Shop for Title Insurance and Other Closing Services",
+    "url": "https://www.consumerfinance.gov/owning-a-home/close/shop-for-title-insurance-and-other-closing-services/",
+    "publisher": "CFPB",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "cfpb_walkthrough",
+    "title": "Close the Deal",
+    "url": "https://www.consumerfinance.gov/owning-a-home/close/close-the-deal/",
+    "publisher": "CFPB",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "irs_rental",
+    "title": "Publication 527 (2025), Residential Rental Property",
+    "url": "https://www.irs.gov/publications/p527",
+    "publisher": "Internal Revenue Service",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "irs_disposition",
+    "title": "About Publication 544, Sales and Other Dispositions of Assets",
+    "url": "https://www.irs.gov/forms-pubs/about-publication-544",
+    "publisher": "IRS",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "irs_basis",
+    "title": "About Publication 551, Basis of Assets",
+    "url": "https://www.irs.gov/forms-pubs/about-publication-551",
+    "publisher": "IRS",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "epa_aai",
+    "title": "Brownfields All Appropriate Inquiries",
+    "url": "https://www.epa.gov/brownfields/brownfields-all-appropriate-inquiries",
+    "publisher": "Environmental Protection Agency",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "epa_aai_checklist",
+    "title": "AAI Reporting Requirements Checklist",
+    "url": "https://www.epa.gov/brownfields/all-appropriate-inquiries-reporting-requirements-checklist-assessment-and-multipurpose",
+    "publisher": "EPA",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "epa_liability",
+    "title": "Common Elements and Other Landowner Liability Guidance",
+    "url": "https://www.epa.gov/enforcement/common-elements-and-other-landowner-liability-guidance",
+    "publisher": "EPA",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "epa_lead",
+    "title": "Real Estate Disclosures about Potential Lead Hazards",
+    "url": "https://www.epa.gov/lead/real-estate-disclosures-about-potential-lead-hazards",
+    "publisher": "EPA",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "epa_rrp",
+    "title": "Lead Renovation, Repair and Painting Program",
+    "url": "https://www.epa.gov/lead/lead-renovation-repair-and-painting-program",
+    "publisher": "EPA",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "hud_fair",
+    "title": "Housing Discrimination Under the Fair Housing Act",
+    "url": "https://www.hud.gov/program_offices/fair_housing_equal_opp/fair_housing_act_overview",
+    "publisher": "Department of Housing and Urban Development",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "fema_map",
+    "title": "Flood Maps Training: Map Service Center",
+    "url": "https://emilms.fema.gov/is_0273/groups/173.html",
+    "publisher": "Federal Emergency Management Agency",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "fema_risk",
+    "title": "National Risk Index Technical Documentation",
+    "url": "https://www.fema.gov/sites/default/files/documents/fema_national-risk-index_technical-documentation.pdf",
+    "publisher": "FEMA",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "census_acs",
+    "title": "ACS Data via API",
+    "url": "https://www.census.gov/programs-surveys/acs/data/data-via-api.html",
+    "publisher": "US Census Bureau",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "census_api",
+    "title": "Census API User Guide: Example Queries",
+    "url": "https://www.census.gov/data/developers/guidance/api-user-guide.Example_API_Queries.html",
+    "publisher": "US Census Bureau",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "census_bps",
+    "title": "Building Permits Survey",
+    "url": "https://www.census.gov/construction/bps/index.html",
+    "publisher": "US Census Bureau",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "census_soc",
+    "title": "Survey of Construction",
+    "url": "https://www.census.gov/construction/soc",
+    "publisher": "US Census Bureau",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "census_hvs",
+    "title": "Housing Vacancies and Homeownership",
+    "url": "https://www.census.gov/housing/hvs/index.html",
+    "publisher": "US Census Bureau",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "census_vacancy",
+    "title": "Vacancy Rate Fact Sheet: Differences in Census Surveys",
+    "url": "https://www.census.gov/housing/hvs/files/vacanciesfactsheet.pdf",
+    "publisher": "US Census Bureau",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "fhfa_hpi",
+    "title": "House Price Index Datasets",
+    "url": "https://www.fhfa.gov/data/hpi/datasets",
+    "publisher": "Federal Housing Finance Agency",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "fhfa_method",
+    "title": "House Price Index Frequently Asked Questions",
+    "url": "https://www.fhfa.gov/faqs/hpi",
+    "publisher": "FHFA",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "fnma_sales",
+    "title": "Selling Guide B4-1.3-07 Sales Comparison Approach",
+    "url": "https://guide-selling.fanniemae.com/sel/b4-1.3-07/sales-comparison-approach-section-appraisal-report",
+    "publisher": "Fannie Mae",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "fnma_comps",
+    "title": "Selling Guide B4-1.3-08 Comparable Sales",
+    "url": "https://guide-selling.fanniemae.com/sel/b4-1.3-08/comparable-sales",
+    "publisher": "Fannie Mae",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "fnma_value",
+    "title": "Selling Guide Definition of Market Value",
+    "url": "https://selling-guide.fanniemae.com/sel/b4-1.1-01/definition-market-value",
+    "publisher": "Fannie Mae",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "fnma_reserves",
+    "title": "Multifamily Guide: Determining Replacement Reserve",
+    "url": "https://mfguide.fanniemae.com/node/4106",
+    "publisher": "Fannie Mae",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "freddie_condition",
+    "title": "Freddie Mac Multifamily Guide and Forms",
+    "url": "https://mf.freddiemac.com/lenders/guide",
+    "publisher": "Freddie Mac",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "freddie_appraisal",
+    "title": "Multifamily Underwriting Appraisal Checklist",
+    "url": "https://mf.freddiemac.com/docs/mf_underwriting_appraisal_checklist.pdf",
+    "publisher": "Freddie Mac",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "freddie_underwrite",
+    "title": "Multifamily Originate and Underwrite",
+    "url": "https://mf.freddiemac.com/lenders/uw",
+    "publisher": "Freddie Mac",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "denver_zoning",
+    "title": "Denver Zoning Code",
+    "url": "https://denvergov.org/files/assets/public/community-planning-and-development/documents/zoning/denver-zoning-code/complete_denver_zoning_code.pdf",
+    "publisher": "City and County of Denver",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "denver_permits",
+    "title": "Denver Plan Review, Permits, and Inspections",
+    "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections",
+    "publisher": "City and County of Denver",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "denver_historic",
+    "title": "Denver Urban Design and Design Review",
+    "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Denver-Zoning-Code/Urban-Design-Design-Review-Design-Standards-and-Guidelines",
+    "publisher": "City and County of Denver",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "trec_interest",
+    "title": "TREC Rules, including 535.6 Equitable Interests",
+    "url": "https://www.trec.texas.gov/node/634",
+    "publisher": "Texas Real Estate Commission",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "trec_seller",
+    "title": "Seller's Disclosure Notice",
+    "url": "https://www.trec.texas.gov/forms/sellers-disclosure-notice",
+    "publisher": "Texas Real Estate Commission",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "sec_offerings",
+    "title": "Exempt Offerings",
+    "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings",
+    "publisher": "Securities and Exchange Commission",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "sec_solicitation",
+    "title": "General Solicitation",
+    "url": "https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/general-solicitation",
+    "publisher": "SEC",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "sec_placements",
+    "title": "Private Placements under Regulation D: Investor Bulletin",
+    "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/private",
+    "publisher": "SEC Investor.gov",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "ftc_email",
+    "title": "CAN-SPAM Act: Compliance Guide for Business",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "publisher": "Federal Trade Commission",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "ftc_calls",
+    "title": "Complying with the Telemarketing Sales Rule",
+    "url": "https://www.ftc.gov/business-guidance/resources/complying-telemarketing-sales-rule",
+    "publisher": "FTC",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "foia",
+    "title": "How to Make a FOIA Request",
+    "url": "https://www.foia.gov/how-to.html",
+    "publisher": "US Department of Justice",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "foia_faq",
+    "title": "FOIA Frequently Asked Questions",
+    "url": "https://www.foia.gov/faq.html",
+    "publisher": "US Department of Justice",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "nist",
+    "title": "AI Risk Management Framework",
+    "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+    "publisher": "National Institute of Standards and Technology",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "nist_playbook",
+    "title": "AI RMF Playbook",
+    "url": "https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook",
+    "publisher": "NIST",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "sklearn_text",
+    "title": "Text Feature Extraction",
+    "url": "https://scikit-learn.org/stable/modules/feature_extraction.html",
+    "publisher": "scikit-learn",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "sklearn_tfidf",
+    "title": "TfidfVectorizer Reference",
+    "url": "https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html",
+    "publisher": "scikit-learn",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "robots",
+    "title": "RFC 9309 Robots Exclusion Protocol",
+    "url": "https://www.rfc-editor.org/rfc/rfc9309.html",
+    "publisher": "IETF RFC Editor",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "sec_access",
+    "title": "SEC Webmaster Frequently Asked Questions",
+    "url": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+    "publisher": "SEC",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "energy",
+    "title": "ENERGY STAR Portfolio Manager Benchmarking",
+    "url": "https://www.energystar.gov/buildings/benchmark?testEnv=false",
+    "publisher": "EPA ENERGY STAR",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "energy_sample",
+    "title": "Portfolio Manager Data Explorer",
+    "url": "https://www.energystar.gov/buildings/resources-topic/portfolio-manager-data-explorer",
+    "publisher": "EPA ENERGY STAR",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "avb2024q3",
+    "title": "AvalonBay 2024 Q3 Form 10-Q",
+    "url": "https://www.sec.gov/Archives/edgar/data/915912/000091591224000021/avb-20240930.htm",
+    "publisher": "AvalonBay Communities",
+    "locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "avb2023q3",
+    "title": "AvalonBay 2023 Q3 Form 10-Q",
+    "url": "https://investors.avalonbay.com/sec-filings/all-sec-filings/content/0000915912-23-000018/avb-20230930.htm",
+    "publisher": "AvalonBay Communities",
+    "locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "avb2022q3",
+    "title": "AvalonBay 2022 Q3 Form 10-Q",
+    "url": "https://www.sec.gov/Archives/edgar/data/915912/000091591222000020/avb-20220930.htm",
+    "publisher": "AvalonBay Communities",
+    "locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "avb2021q3",
+    "title": "AvalonBay 2021 Q3 Form 10-Q",
+    "url": "https://www.sec.gov/Archives/edgar/data/915912/000091591221000023/avb-20210930.htm",
+    "publisher": "AvalonBay Communities",
+    "locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "avb2020q3",
+    "title": "AvalonBay 2020 Q3 Form 10-Q",
+    "url": "https://www.sec.gov/Archives/edgar/data/915912/000091591220000027/avb-20200930.htm",
+    "publisher": "AvalonBay Communities",
+    "locator": "Note 6, disposition table; table dollars in thousands",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "avb2025q2",
+    "title": "AvalonBay 2025 Q2 Form 10-Q",
+    "url": "https://investors.avalonbay.com/sec-filings/all-sec-filings/content/0000915912-25-000019/avb-20250630.htm",
+    "publisher": "AvalonBay Communities",
+    "locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "avb2026q1",
+    "title": "AvalonBay 2026 Q1 Form 10-Q",
+    "url": "https://www.sec.gov/Archives/edgar/data/915912/000091591226000012/avb-20260331.htm",
+    "publisher": "AvalonBay Communities",
+    "locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "avb2024q4",
+    "title": "AvalonBay 2024 Q4 Earnings Release",
+    "url": "https://www.sec.gov/Archives/edgar/data/915912/000091591225000003/q42024ex-992.htm",
+    "publisher": "AvalonBay Communities",
+    "locator": "Disposition Activity, Q4 2024; dollars stated in whole USD",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "slg2024jv",
+    "title": "SL Green 2024 annual joint-venture disposition table",
+    "url": "https://www.sec.gov/Archives/edgar/data/1040971/000104097125000019/R26.htm",
+    "publisher": "SL Green Realty",
+    "locator": "Disposition of Joint Venture Interests or Properties; values in millions",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "slg2025jv",
+    "title": "SL Green 2025 annual joint-venture disposition table",
+    "url": "https://www.sec.gov/Archives/edgar/data/1040971/000162828026008669/R50.htm",
+    "publisher": "SL Green Realty",
+    "locator": "Disposition table; gross asset values and seller share gains in millions",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "slg2021jv",
+    "title": "SL Green 2021 annual joint-venture disposition table",
+    "url": "https://www.sec.gov/Archives/edgar/data/1040971/000104097122000014/R49.htm",
+    "publisher": "SL Green Realty",
+    "locator": "Disposition table for 2021, 2020 and 2019; values in millions",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "ess2024",
+    "title": "Essex 2024 annual real estate interests table",
+    "url": "https://www.sec.gov/Archives/edgar/data/920522/000092052225000024/R19.htm",
+    "publisher": "Essex Property Trust",
+    "locator": "Note Dispositions of Real Estate Interests; USD millions",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "bdn2023",
+    "title": "Brandywine Realty Trust 2023 annual real estate investments table",
+    "url": "https://www.sec.gov/Archives/edgar/data/1060386/000079081624000014/R46.htm",
+    "publisher": "Brandywine Realty Trust",
+    "locator": "Real Estate Investments, Schedule of Office Properties Sold and footnotes; values USD thousands",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  }
+]

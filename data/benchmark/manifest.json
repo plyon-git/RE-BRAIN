@@ -1,0 +1,377 @@
+{
+  "name": "101XVC BRAIN synthetic property evidence benchmark",
+  "schema_version": "101xvc-brain.synthetic-evidence.v1",
+  "synthetic": true,
+  "description": "Deterministic structured property evidence for parser, search, ingestion and underwriting load tests. No live records or investment opportunities.",
+  "data_classification": "synthetic_test_data",
+  "license": "101XVC proprietary",
+  "generated_at": "2026-09-30T12:00:00Z",
+  "generation_date_basis": "fixed_for_reproducibility",
+  "seed": 101,
+  "requested_target_bytes": 1073741824,
+  "effective_target_bytes": 1073741824,
+  "quick_sample": false,
+  "total_ndjson_bytes": 1073758930,
+  "parcel_count": 58142,
+  "evidence_record_count": 232568,
+  "max_shard_bytes": 33554432,
+  "categories": {
+    "assessor": {
+      "records": 58142,
+      "bytes": 199370787,
+      "shards": 6
+    },
+    "recorder": {
+      "records": 58142,
+      "bytes": 198374992,
+      "shards": 6
+    },
+    "zoning": {
+      "records": 58142,
+      "bytes": 176890078,
+      "shards": 6
+    },
+    "market": {
+      "records": 58142,
+      "bytes": 499123073,
+      "shards": 15
+    }
+  },
+  "state_parcel_counts": {
+    "AL": 3877,
+    "AZ": 3877,
+    "CO": 3876,
+    "FL": 3876,
+    "GA": 3876,
+    "IL": 3876,
+    "IN": 3876,
+    "KS": 3876,
+    "MO": 3876,
+    "NC": 3876,
+    "OK": 3876,
+    "SC": 3876,
+    "TN": 3876,
+    "TX": 3876,
+    "UT": 3876
+  },
+  "geographic_fixture_counties": [
+    {
+      "state": "AL",
+      "county": "Jefferson",
+      "fips": "01073"
+    },
+    {
+      "state": "AZ",
+      "county": "Maricopa",
+      "fips": "04013"
+    },
+    {
+      "state": "CO",
+      "county": "Denver",
+      "fips": "08031"
+    },
+    {
+      "state": "FL",
+      "county": "Orange",
+      "fips": "12095"
+    },
+    {
+      "state": "GA",
+      "county": "Fulton",
+      "fips": "13121"
+    },
+    {
+      "state": "IL",
+      "county": "Cook",
+      "fips": "17031"
+    },
+    {
+      "state": "IN",
+      "county": "Marion",
+      "fips": "18097"
+    },
+    {
+      "state": "KS",
+      "county": "Johnson",
+      "fips": "20091"
+    },
+    {
+      "state": "MO",
+      "county": "Jackson",
+      "fips": "29095"
+    },
+    {
+      "state": "NC",
+      "county": "Mecklenburg",
+      "fips": "37119"
+    },
+    {
+      "state": "OK",
+      "county": "Oklahoma",
+      "fips": "40109"
+    },
+    {
+      "state": "SC",
+      "county": "Greenville",
+      "fips": "45045"
+    },
+    {
+      "state": "TN",
+      "county": "Davidson",
+      "fips": "47037"
+    },
+    {
+      "state": "TX",
+      "county": "Harris",
+      "fips": "48201"
+    },
+    {
+      "state": "UT",
+      "county": "Salt Lake",
+      "fips": "49035"
+    }
+  ],
+  "relationships": {
+    "join_key": "parcel_id",
+    "records_per_parcel": 4,
+    "embedded_comparables_per_parcel": 8,
+    "recorder_instruments_per_parcel": 3
+  },
+  "shards": [
+    {
+      "path": "assessor-0001.ndjson",
+      "category": "assessor",
+      "bytes": 33553233,
+      "records": 9795,
+      "sha256": "b5b8f73e850679455299512f32f509cfdf86006561907aaeb0e898ff2b640c3c"
+    },
+    {
+      "path": "assessor-0002.ndjson",
+      "category": "assessor",
+      "bytes": 33552936,
+      "records": 9783,
+      "sha256": "c7403c4c1189ff6caf8f9ccd853f032b5076162e3dc1356ca7b29ad7943653f2"
+    },
+    {
+      "path": "assessor-0003.ndjson",
+      "category": "assessor",
+      "bytes": 33551556,
+      "records": 9783,
+      "sha256": "15ce4bd444a0239834cec8e6a0a75119e3a1c0ece135944c29431ceb7ae1aec4"
+    },
+    {
+      "path": "assessor-0004.ndjson",
+      "category": "assessor",
+      "bytes": 33552789,
+      "records": 9783,
+      "sha256": "f2cc0aa58ce632db62c264bc0ac0e04f7f11e7e0381eb0bfd8aec67e0f68bd99"
+    },
+    {
+      "path": "assessor-0005.ndjson",
+      "category": "assessor",
+      "bytes": 33553765,
+      "records": 9783,
+      "sha256": "d22aca0bf2fb85daa0cd5485053fbd6622f231af3bbce4236e4789b20f001153"
+    },
+    {
+      "path": "assessor-0006.ndjson",
+      "category": "assessor",
+      "bytes": 31606508,
+      "records": 9215,
+      "sha256": "3b63adda241882c67511e521087934755fc7ac88554251160a852c32d38f9388"
+    },
+    {
+      "path": "recorder-0001.ndjson",
+      "category": "recorder",
+      "bytes": 33551066,
+      "records": 9868,
+      "sha256": "0bc0820e1504226780573ee351bd8708b3d206a92de9080105fb7dc311bc2327"
+    },
+    {
+      "path": "recorder-0002.ndjson",
+      "category": "recorder",
+      "bytes": 33551890,
+      "records": 9827,
+      "sha256": "9e8f61e58a85835f1e0f07e474a5582d096fee4022a66084472aec55beeafe4b"
+    },
+    {
+      "path": "recorder-0003.ndjson",
+      "category": "recorder",
+      "bytes": 33553456,
+      "records": 9827,
+      "sha256": "d63aaa98ea7c8b4e25ead0fa9b7af2d3d79bee215272b152bc1e596d6b4a856a"
+    },
+    {
+      "path": "recorder-0004.ndjson",
+      "category": "recorder",
+      "bytes": 33552072,
+      "records": 9827,
+      "sha256": "36efca1ab2621f9dcd6171b622478d3f25352fd959fe82b625ce4c2b5558cde6"
+    },
+    {
+      "path": "recorder-0005.ndjson",
+      "category": "recorder",
+      "bytes": 33552552,
+      "records": 9827,
+      "sha256": "0e3d8f26840250875ac2d72e0904b6b336453353a536408fa8d7f0f1839a1e65"
+    },
+    {
+      "path": "recorder-0006.ndjson",
+      "category": "recorder",
+      "bytes": 30613956,
+      "records": 8966,
+      "sha256": "dc2aa77bd9cd606c7a485c50d405e3254533a1d192bfde51791abacbc87f0de6"
+    },
+    {
+      "path": "zoning-0001.ndjson",
+      "category": "zoning",
+      "bytes": 33552999,
+      "records": 11038,
+      "sha256": "e529f99bcd13f5c6e71d64936d7a5eb9a442eeafac3e4953d841d7dd60e2d763"
+    },
+    {
+      "path": "zoning-0002.ndjson",
+      "category": "zoning",
+      "bytes": 33553782,
+      "records": 11027,
+      "sha256": "e5c65ca55dea40f4416d4bb5f4edf1e4ffc3c084040413d5c2316c6f8f61cd05"
+    },
+    {
+      "path": "zoning-0003.ndjson",
+      "category": "zoning",
+      "bytes": 33551718,
+      "records": 11025,
+      "sha256": "a1c9a3463f3ef677a88c57712bf567844ae1467a7a813ecc85e34701a4f9ad0d"
+    },
+    {
+      "path": "zoning-0004.ndjson",
+      "category": "zoning",
+      "bytes": 33552449,
+      "records": 11026,
+      "sha256": "9ed3faeeca51d4b3d2d461bb461143b17922bfeecb5351d893ffee10d658376d"
+    },
+    {
+      "path": "zoning-0005.ndjson",
+      "category": "zoning",
+      "bytes": 33552418,
+      "records": 11027,
+      "sha256": "bb7c247358fe441d32902f3eeb0f19fcca2660d1fd3da1cd07ba84ae76a25345"
+    },
+    {
+      "path": "zoning-0006.ndjson",
+      "category": "zoning",
+      "bytes": 9126712,
+      "records": 2999,
+      "sha256": "3b87070b0c5ec91949eec1d7b6a49623e64af3a0df78df8ca539ca6ee7cc485d"
+    },
+    {
+      "path": "market-0001.ndjson",
+      "category": "market",
+      "bytes": 33547883,
+      "records": 3908,
+      "sha256": "fdf89525b30db7b103ed0671d4466893406758fdfae1148dc524ecc41975aefe"
+    },
+    {
+      "path": "market-0002.ndjson",
+      "category": "market",
+      "bytes": 33549734,
+      "records": 3908,
+      "sha256": "adbb5e00faa8fcb7afd5269a62ad0b0b1e67c5744f8a36265c331b7034815946"
+    },
+    {
+      "path": "market-0003.ndjson",
+      "category": "market",
+      "bytes": 33547278,
+      "records": 3908,
+      "sha256": "c624d88d98f7788c223189aa534c2c6d462057e483684d06c884ac040457424e"
+    },
+    {
+      "path": "market-0004.ndjson",
+      "category": "market",
+      "bytes": 33548438,
+      "records": 3908,
+      "sha256": "8708cd87571a734b8d2570a5acd64926ff72543c9a86be60ae624022a0d531bf"
+    },
+    {
+      "path": "market-0005.ndjson",
+      "category": "market",
+      "bytes": 33547961,
+      "records": 3908,
+      "sha256": "cb2c36a48e6b9565e990343ea427bef2b73b8ddf52d295c58ca8918a658e618b"
+    },
+    {
+      "path": "market-0006.ndjson",
+      "category": "market",
+      "bytes": 33548809,
+      "records": 3908,
+      "sha256": "518fd49c39ff22fb67a0eb4c7566ec5b3f16c6374375a38f3d821cd9d1ab5f35"
+    },
+    {
+      "path": "market-0007.ndjson",
+      "category": "market",
+      "bytes": 33549018,
+      "records": 3908,
+      "sha256": "e51b9b5dad5a1d7056897804120eb859f3a76ec2e7e757cdf036296540509ddc"
+    },
+    {
+      "path": "market-0008.ndjson",
+      "category": "market",
+      "bytes": 33548855,
+      "records": 3908,
+      "sha256": "f63693d9fc6fee19781baf39774a026271af91247cea989b4fd0cd539657c57a"
+    },
+    {
+      "path": "market-0009.ndjson",
+      "category": "market",
+      "bytes": 33547331,
+      "records": 3908,
+      "sha256": "e2f026427a922b17757a47813d21607efaaa7648858ff30c139a5e6032456e46"
+    },
+    {
+      "path": "market-0010.ndjson",
+      "category": "market",
+      "bytes": 33546833,
+      "records": 3908,
+      "sha256": "97cdfdcadec5b12f1fcc7228e7d309e22033a73cc78fd364a1c70f13fb5d0da9"
+    },
+    {
+      "path": "market-0011.ndjson",
+      "category": "market",
+      "bytes": 33549111,
+      "records": 3908,
+      "sha256": "767c521c578dac18ae1561f03da56371b5dbaffeb9c314f50d51809e8b79341a"
+    },
+    {
+      "path": "market-0012.ndjson",
+      "category": "market",
+      "bytes": 33548906,
+      "records": 3908,
+      "sha256": "5a3bcd8fd95036939b7085b9214c62ca598b1d822d51a1b9c5d309df49e31e89"
+    },
+    {
+      "path": "market-0013.ndjson",
+      "category": "market",
+      "bytes": 33548595,
+      "records": 3908,
+      "sha256": "659e6b1fa25fbf615e53f0f9d45c1ff82f97ab5be8d7ffff443539cb7eee8235"
+    },
+    {
+      "path": "market-0014.ndjson",
+      "category": "market",
+      "bytes": 33549370,
+      "records": 3908,
+      "sha256": "3499bac5149312456564b92fb41038570b9a8b8e367819fc5e302df74802d426"
+    },
+    {
+      "path": "market-0015.ndjson",
+      "category": "market",
+      "bytes": 29444951,
+      "records": 3430,
+      "sha256": "4b9a4000371be20ebb9a31b4adf0d9cbc718432a616627c9a7a39be2bcc04419"
+    }
+  ],
+  "reproduction": {
+    "python": "3.12",
+    "command": "python3 scripts/benchmark.py --seed 101 --target-bytes 1073741824 --output data/benchmark"
+  }
+}

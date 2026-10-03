@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "101XVC BRAIN evidence observation",
+  "type": "object",
+  "required": ["source_id", "source_record_id", "county_fips", "state", "category", "observed_at", "attributes"],
+  "properties": {
+    "source_id": {"type": "string", "minLength": 1},
+    "source_record_id": {"type": "string", "minLength": 1},
+    "county_fips": {"type": "string", "pattern": "^[0-9]{5}$"},
+    "state": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "parcel_id": {"type": ["string", "null"]},
+    "address": {"type": "string"},
+    "category": {"enum": ["assessor", "recorder", "zoning", "market"]},
+    "observed_at": {"type": "string", "format": "date-time"},
+    "synthetic": {"type": "boolean", "default": false},
+    "attributes": {"type": "object"}
+  },
+  "description": "Source must be registered before ingestion. A nonempty parcel or address is required. Parcel identifiers must be strings so leading zeros survive. Field-level constraints are additionally validated by the API."
+}

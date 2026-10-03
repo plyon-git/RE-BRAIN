@@ -1,0 +1,49 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: services/api/Dockerfile
+    ports:
+      - "127.0.0.1:${BRAIN_PORT:-8080}:8080"
+    environment:
+      BRAIN_HOST: 0.0.0.0
+      BRAIN_PORT: 8080
+      BRAIN_API_KEY: ${BRAIN_API_KEY:?Set BRAIN_API_KEY in .env}
+      BRAIN_DB: /app/runtime/brain.sqlite3
+      COLLECTOR_URL: http://collector:8081
+      RESOLVER_URL: http://resolver:8082
+      INTELLIGENCE_URL: http://intelligence:8083
+    volumes:
+      - brain-runtime:/app/runtime
+    depends_on:
+      - collector
+      - resolver
+      - intelligence
+    restart: unless-stopped
+  collector:
+    build: services/collector
+    environment:
+      COLLECTOR_PORT: 8081
+      BRAIN_API_KEY: ${BRAIN_API_KEY}
+      COLLECTOR_ALLOWED_HOSTS: ${COLLECTOR_ALLOWED_HOSTS:-services.arcgis.com}
+    restart: unless-stopped
+  resolver:
+    build: services/resolver
+    environment:
+      BRAIN_RESOLVER_PORT: 8082
+      BRAIN_API_KEY: ${BRAIN_API_KEY}
+    restart: unless-stopped
+  intelligence:
+    build:
+      context: .
+      dockerfile: services/intelligence/Dockerfile
+    environment:
+      BRAIN_API_KEY: ${BRAIN_API_KEY}
+      BRAIN_MODEL: /app/runtime/model.json
+      BRAIN_VAULT: /app/knowledge/obsidian
+    volumes:
+      - intelligence-runtime:/app/runtime
+    restart: unless-stopped
+volumes:
+  brain-runtime:
+  intelligence-runtime:

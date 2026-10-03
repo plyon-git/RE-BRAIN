@@ -1,0 +1,18 @@
+[package]
+name = "brain-resolver"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.83"
+publish = false
+description = "101XVC BRAIN county-scoped property identity resolver"
+license = "LicenseRef-101XVC-Proprietary"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha2 = "0.10"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

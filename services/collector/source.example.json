@@ -1,0 +1,18 @@
+{
+  "id": "county-parcels-template",
+  "name": "Replace with the publisher and dataset title",
+  "url": "https://YOUR-COUNTY.gov/export/parcels.csv",
+  "adapter": "csv",
+  "category": "property",
+  "state": "CO",
+  "county_fips": "08031",
+  "mapping": {
+    "source_record_id": "RECORD_ID",
+    "parcel_id": "PARCEL_NUMBER",
+    "address": "SITE_ADDRESS",
+    "owner": "OWNER_NAME",
+    "assessed_value": "ASSESSED_VALUE",
+    "debt": "DELINQUENT_BALANCE"
+  },
+  "options": {"page_size": 1000, "max_records": 10000, "max_pages": 100}
+}

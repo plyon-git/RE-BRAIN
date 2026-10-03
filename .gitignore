@@ -1,0 +1,12 @@
+runtime/
+__pycache__/
+*.pyc
+*.sqlite*
+.env
+.venv/
+node_modules/
+target/
+dist/
+*.log
+artifacts/
+.DS_Store

@@ -1,0 +1,3209 @@
+{
+  "schema_version": "1.0",
+  "name": "101XVC BRAIN Curated Real Estate Knowledge",
+  "built_utc": "2026-10-03",
+  "coverage": "US real estate operating foundation and selected issuer-reported completed positive-gain transactions; not exhaustive",
+  "source_count": 66,
+  "topic_count": 158,
+  "template_count": 10,
+  "deal_count": 53,
+  "positive_gain_measure": "reported accounting disposition gain; not complete net cash profitability",
+  "notes": [
+    {
+      "id": "note-acquisition-intake",
+      "title": "Acquisition intake",
+      "path": "01-Acquisition/Acquisition intake.md",
+      "source_ids": [
+        "cfpb_documents",
+        "fnma_sales"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-buy-box",
+      "title": "Buy box",
+      "path": "01-Acquisition/Buy box.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-seller-authority",
+      "title": "Seller authority",
+      "path": "01-Acquisition/Seller authority.md",
+      "source_ids": [
+        "cfpb_documents"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-parcel-identity",
+      "title": "Parcel identity",
+      "path": "01-Acquisition/Parcel identity.md",
+      "source_ids": [
+        "cfpb_documents",
+        "census_api"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-contract-assignment",
+      "title": "Contract assignment",
+      "path": "01-Acquisition/Contract assignment.md",
+      "source_ids": [
+        "trec_interest"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-equitable-interest-disclosure",
+      "title": "Equitable interest disclosure",
+      "path": "01-Acquisition/Equitable interest disclosure.md",
+      "source_ids": [
+        "trec_interest"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-double-closing",
+      "title": "Double closing",
+      "path": "01-Acquisition/Double closing.md",
+      "source_ids": [
+        "cfpb_documents",
+        "cfpb_closing"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-novation-review",
+      "title": "Novation review",
+      "path": "01-Acquisition/Novation review.md",
+      "source_ids": [
+        "trec_interest",
+        "cfpb_documents"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-earnest-money",
+      "title": "Earnest money",
+      "path": "01-Acquisition/Earnest money.md",
+      "source_ids": [
+        "cfpb_closing"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-contract-deadlines",
+      "title": "Contract deadlines",
+      "path": "01-Acquisition/Contract deadlines.md",
+      "source_ids": [
+        "cfpb_documents"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-buyer-qualification",
+      "title": "Buyer qualification",
+      "path": "01-Acquisition/Buyer qualification.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-proof-of-funds",
+      "title": "Proof of funds",
+      "path": "01-Acquisition/Proof of funds.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-disposition-pipeline",
+      "title": "Disposition pipeline",
+      "path": "01-Acquisition/Disposition pipeline.md",
+      "source_ids": [
+        "cfpb_closing"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-conversion-funnel",
+      "title": "Conversion funnel",
+      "path": "01-Acquisition/Conversion funnel.md",
+      "source_ids": [
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-exception-approval",
+      "title": "Exception approval",
+      "path": "01-Acquisition/Exception approval.md",
+      "source_ids": [
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-counterparty-risk",
+      "title": "Counterparty risk",
+      "path": "01-Acquisition/Counterparty risk.md",
+      "source_ids": [
+        "occ_cre",
+        "fed_concentration"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-net-operating-income",
+      "title": "Net operating income",
+      "path": "02-Valuation/Net operating income.md",
+      "source_ids": [
+        "occ_cre",
+        "freddie_appraisal"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-cap-rate",
+      "title": "Cap rate",
+      "path": "02-Valuation/Cap rate.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-exit-value",
+      "title": "Exit value",
+      "path": "02-Valuation/Exit value.md",
+      "source_ids": [
+        "occ_cre",
+        "occ_refinance"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-comparable-sales",
+      "title": "Comparable sales",
+      "path": "02-Valuation/Comparable sales.md",
+      "source_ids": [
+        "fnma_comps"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-comparable-adjustments",
+      "title": "Comparable adjustments",
+      "path": "02-Valuation/Comparable adjustments.md",
+      "source_ids": [
+        "fnma_value",
+        "fnma_sales"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-arm-length-sale",
+      "title": "Arm length sale",
+      "path": "02-Valuation/Arm length sale.md",
+      "source_ids": [
+        "fnma_value"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-sales-concessions",
+      "title": "Sales concessions",
+      "path": "02-Valuation/Sales concessions.md",
+      "source_ids": [
+        "fnma_value"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-after-repair-value",
+      "title": "After repair value",
+      "path": "02-Valuation/After repair value.md",
+      "source_ids": [
+        "fnma_sales",
+        "fnma_comps"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-maximum-allowable-offer",
+      "title": "Maximum allowable offer",
+      "path": "02-Valuation/Maximum allowable offer.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-transaction-spread",
+      "title": "Transaction spread",
+      "path": "02-Valuation/Transaction spread.md",
+      "source_ids": [
+        "cfpb_closing"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-assignment-fee",
+      "title": "Assignment fee",
+      "path": "02-Valuation/Assignment fee.md",
+      "source_ids": [
+        "trec_interest",
+        "cfpb_closing"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-realized-profit",
+      "title": "Realized profit",
+      "path": "02-Valuation/Realized profit.md",
+      "source_ids": [
+        "irs_disposition"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-accounting-gain",
+      "title": "Accounting gain",
+      "path": "02-Valuation/Accounting gain.md",
+      "source_ids": [
+        "irs_basis",
+        "irs_disposition"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-cash-on-cash-return",
+      "title": "Cash on cash return",
+      "path": "02-Valuation/Cash on cash return.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-irr",
+      "title": "IRR",
+      "path": "02-Valuation/IRR.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-npv",
+      "title": "NPV",
+      "path": "02-Valuation/NPV.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-equity-multiple",
+      "title": "Equity multiple",
+      "path": "02-Valuation/Equity multiple.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-scenario-underwriting",
+      "title": "Scenario underwriting",
+      "path": "02-Valuation/Scenario underwriting.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-sensitivity-analysis",
+      "title": "Sensitivity analysis",
+      "path": "02-Valuation/Sensitivity analysis.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-valuation-uncertainty",
+      "title": "Valuation uncertainty",
+      "path": "02-Valuation/Valuation uncertainty.md",
+      "source_ids": [
+        "fnma_sales",
+        "nist"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-break-even-occupancy",
+      "title": "Break even occupancy",
+      "path": "02-Valuation/Break even occupancy.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-highest-and-best-use-review",
+      "title": "Highest and best use review",
+      "path": "02-Valuation/Highest and best use review.md",
+      "source_ids": [
+        "denver_zoning",
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-debt-service-coverage",
+      "title": "Debt service coverage",
+      "path": "03-Finance/Debt service coverage.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-debt-yield",
+      "title": "Debt yield",
+      "path": "03-Finance/Debt yield.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-loan-to-value",
+      "title": "Loan to value",
+      "path": "03-Finance/Loan to value.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-loan-to-cost",
+      "title": "Loan to cost",
+      "path": "03-Finance/Loan to cost.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-loan-sizing",
+      "title": "Loan sizing",
+      "path": "03-Finance/Loan sizing.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-amortization",
+      "title": "Amortization",
+      "path": "03-Finance/Amortization.md",
+      "source_ids": [
+        "cfpb_closing"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-balloon-maturity",
+      "title": "Balloon maturity",
+      "path": "03-Finance/Balloon maturity.md",
+      "source_ids": [
+        "occ_refinance"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-floating-rate-debt",
+      "title": "Floating rate debt",
+      "path": "03-Finance/Floating rate debt.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-interest-rate-caps",
+      "title": "Interest rate caps",
+      "path": "03-Finance/Interest rate caps.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-refinance-risk",
+      "title": "Refinance risk",
+      "path": "03-Finance/Refinance risk.md",
+      "source_ids": [
+        "occ_refinance"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-bridge-financing",
+      "title": "Bridge financing",
+      "path": "03-Finance/Bridge financing.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-working-capital",
+      "title": "Working capital",
+      "path": "03-Finance/Working capital.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-cash-conversion-cycle",
+      "title": "Cash conversion cycle",
+      "path": "03-Finance/Cash conversion cycle.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-levered-cash-flow",
+      "title": "Levered cash flow",
+      "path": "03-Finance/Levered cash flow.md",
+      "source_ids": [
+        "cfpb_closing"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-distribution-waterfall",
+      "title": "Distribution waterfall",
+      "path": "03-Finance/Distribution waterfall.md",
+      "source_ids": [
+        "sec_placements"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-capital-stack",
+      "title": "Capital stack",
+      "path": "03-Finance/Capital stack.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-guarantee-review",
+      "title": "Guarantee review",
+      "path": "03-Finance/Guarantee review.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-portfolio-concentration",
+      "title": "Portfolio concentration",
+      "path": "03-Finance/Portfolio concentration.md",
+      "source_ids": [
+        "fed_concentration"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-title-review",
+      "title": "Title review",
+      "path": "04-Due-Diligence/Title review.md",
+      "source_ids": [
+        "cfpb_title"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-survey-review",
+      "title": "Survey review",
+      "path": "04-Due-Diligence/Survey review.md",
+      "source_ids": [
+        "cfpb_documents"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-site-access",
+      "title": "Site access",
+      "path": "04-Due-Diligence/Site access.md",
+      "source_ids": [
+        "cfpb_documents",
+        "denver_zoning"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-zoning-review",
+      "title": "Zoning review",
+      "path": "04-Due-Diligence/Zoning review.md",
+      "source_ids": [
+        "denver_zoning"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-permits",
+      "title": "Permits",
+      "path": "04-Due-Diligence/Permits.md",
+      "source_ids": [
+        "denver_permits"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-historic-restrictions",
+      "title": "Historic restrictions",
+      "path": "04-Due-Diligence/Historic restrictions.md",
+      "source_ids": [
+        "denver_historic"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-entitlement-schedule",
+      "title": "Entitlement schedule",
+      "path": "04-Due-Diligence/Entitlement schedule.md",
+      "source_ids": [
+        "denver_zoning",
+        "denver_permits"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-environmental-due-diligence",
+      "title": "Environmental due diligence",
+      "path": "04-Due-Diligence/Environmental due diligence.md",
+      "source_ids": [
+        "epa_aai"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-phase-i-assessment",
+      "title": "Phase I assessment",
+      "path": "04-Due-Diligence/Phase I assessment.md",
+      "source_ids": [
+        "epa_aai_checklist"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-continuing-environmental-obligations",
+      "title": "Continuing environmental obligations",
+      "path": "04-Due-Diligence/Continuing environmental obligations.md",
+      "source_ids": [
+        "epa_liability"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-environmental-red-flags",
+      "title": "Environmental red flags",
+      "path": "04-Due-Diligence/Environmental red flags.md",
+      "source_ids": [
+        "epa_aai"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-lead-disclosure",
+      "title": "Lead disclosure",
+      "path": "04-Due-Diligence/Lead disclosure.md",
+      "source_ids": [
+        "epa_lead"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-lead-safe-renovation",
+      "title": "Lead safe renovation",
+      "path": "04-Due-Diligence/Lead safe renovation.md",
+      "source_ids": [
+        "epa_rrp"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-flood-review",
+      "title": "Flood review",
+      "path": "04-Due-Diligence/Flood review.md",
+      "source_ids": [
+        "fema_map"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-natural-hazard-exposure",
+      "title": "Natural hazard exposure",
+      "path": "04-Due-Diligence/Natural hazard exposure.md",
+      "source_ids": [
+        "fema_risk"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-property-condition-assessment",
+      "title": "Property condition assessment",
+      "path": "04-Due-Diligence/Property condition assessment.md",
+      "source_ids": [
+        "freddie_condition"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-insurance-review",
+      "title": "Insurance review",
+      "path": "04-Due-Diligence/Insurance review.md",
+      "source_ids": [
+        "freddie_condition"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-seller-disclosures",
+      "title": "Seller disclosures",
+      "path": "04-Due-Diligence/Seller disclosures.md",
+      "source_ids": [
+        "trec_seller"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-rent-roll",
+      "title": "Rent roll",
+      "path": "05-Operations/Rent roll.md",
+      "source_ids": [
+        "freddie_underwrite"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-t12-analysis",
+      "title": "T12 analysis",
+      "path": "05-Operations/T12 analysis.md",
+      "source_ids": [
+        "freddie_appraisal"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-lease-audit",
+      "title": "Lease audit",
+      "path": "05-Operations/Lease audit.md",
+      "source_ids": [
+        "freddie_underwrite"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-physical-occupancy",
+      "title": "Physical occupancy",
+      "path": "05-Operations/Physical occupancy.md",
+      "source_ids": [
+        "census_hvs"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-economic-occupancy",
+      "title": "Economic occupancy",
+      "path": "05-Operations/Economic occupancy.md",
+      "source_ids": [
+        "freddie_appraisal"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-rent-concessions",
+      "title": "Rent concessions",
+      "path": "05-Operations/Rent concessions.md",
+      "source_ids": [
+        "freddie_appraisal"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-tenant-rollover",
+      "title": "Tenant rollover",
+      "path": "05-Operations/Tenant rollover.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-security-deposits",
+      "title": "Security deposits",
+      "path": "05-Operations/Security deposits.md",
+      "source_ids": [
+        "irs_rental"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-expense-normalization",
+      "title": "Expense normalization",
+      "path": "05-Operations/Expense normalization.md",
+      "source_ids": [
+        "freddie_appraisal"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-property-tax-underwriting",
+      "title": "Property tax underwriting",
+      "path": "05-Operations/Property tax underwriting.md",
+      "source_ids": [
+        "irs_rental"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-replacement-reserves",
+      "title": "Replacement reserves",
+      "path": "05-Operations/Replacement reserves.md",
+      "source_ids": [
+        "fnma_reserves"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-rehab-scope",
+      "title": "Rehab scope",
+      "path": "05-Operations/Rehab scope.md",
+      "source_ids": [
+        "freddie_condition"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-rehab-budget",
+      "title": "Rehab budget",
+      "path": "05-Operations/Rehab budget.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-rehab-contingency",
+      "title": "Rehab contingency",
+      "path": "05-Operations/Rehab contingency.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-contractor-selection",
+      "title": "Contractor selection",
+      "path": "05-Operations/Contractor selection.md",
+      "source_ids": [
+        "epa_rrp",
+        "denver_permits"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-construction-draws",
+      "title": "Construction draws",
+      "path": "05-Operations/Construction draws.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-change-orders",
+      "title": "Change orders",
+      "path": "05-Operations/Change orders.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-construction-schedule",
+      "title": "Construction schedule",
+      "path": "05-Operations/Construction schedule.md",
+      "source_ids": [
+        "denver_permits",
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-lease-up-plan",
+      "title": "Lease up plan",
+      "path": "05-Operations/Lease up plan.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-development-feasibility",
+      "title": "Development feasibility",
+      "path": "05-Operations/Development feasibility.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-development-budget",
+      "title": "Development budget",
+      "path": "05-Operations/Development budget.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-asset-management",
+      "title": "Asset management",
+      "path": "05-Operations/Asset management.md",
+      "source_ids": [
+        "freddie_underwrite"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-energy-benchmarking",
+      "title": "Energy benchmarking",
+      "path": "05-Operations/Energy benchmarking.md",
+      "source_ids": [
+        "energy",
+        "energy_sample"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-operating-efficiency",
+      "title": "Operating efficiency",
+      "path": "05-Operations/Operating efficiency.md",
+      "source_ids": [
+        "energy"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-closing-checklist",
+      "title": "Closing checklist",
+      "path": "05-Operations/Closing checklist.md",
+      "source_ids": [
+        "cfpb_documents",
+        "cfpb_walkthrough"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-closing-statement-reconciliation",
+      "title": "Closing statement reconciliation",
+      "path": "05-Operations/Closing statement reconciliation.md",
+      "source_ids": [
+        "cfpb_closing"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-market-boundary",
+      "title": "Market boundary",
+      "path": "06-Markets/Market boundary.md",
+      "source_ids": [
+        "fnma_comps"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-demand-drivers",
+      "title": "Demand drivers",
+      "path": "06-Markets/Demand drivers.md",
+      "source_ids": [
+        "census_acs"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-acs-interpretation",
+      "title": "ACS interpretation",
+      "path": "06-Markets/ACS interpretation.md",
+      "source_ids": [
+        "census_api"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-margins-of-error",
+      "title": "Margins of error",
+      "path": "06-Markets/Margins of error.md",
+      "source_ids": [
+        "census_api"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-building-permits-data",
+      "title": "Building permits data",
+      "path": "06-Markets/Building permits data.md",
+      "source_ids": [
+        "census_bps"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-housing-starts-and-completions",
+      "title": "Housing starts and completions",
+      "path": "06-Markets/Housing starts and completions.md",
+      "source_ids": [
+        "census_soc"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-supply-pipeline",
+      "title": "Supply pipeline",
+      "path": "06-Markets/Supply pipeline.md",
+      "source_ids": [
+        "census_bps",
+        "census_soc"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-vacancy-statistics",
+      "title": "Vacancy statistics",
+      "path": "06-Markets/Vacancy statistics.md",
+      "source_ids": [
+        "census_vacancy"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-house-price-indexes",
+      "title": "House price indexes",
+      "path": "06-Markets/House price indexes.md",
+      "source_ids": [
+        "fhfa_hpi"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-repeat-sales-methodology",
+      "title": "Repeat sales methodology",
+      "path": "06-Markets/Repeat sales methodology.md",
+      "source_ids": [
+        "fhfa_method"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-assessor-versus-collector",
+      "title": "Assessor versus collector",
+      "path": "06-Markets/Assessor versus collector.md",
+      "source_ids": [
+        "foia",
+        "irs_rental"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-delinquent-tax-records",
+      "title": "Delinquent tax records",
+      "path": "06-Markets/Delinquent tax records.md",
+      "source_ids": [
+        "foia"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-public-records-request",
+      "title": "Public records request",
+      "path": "06-Markets/Public records request.md",
+      "source_ids": [
+        "foia",
+        "foia_faq"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-foia-scope",
+      "title": "FOIA scope",
+      "path": "06-Markets/FOIA scope.md",
+      "source_ids": [
+        "foia_faq"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-county-source-registry",
+      "title": "County source registry",
+      "path": "06-Markets/County source registry.md",
+      "source_ids": [
+        "foia",
+        "robots"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-state-law-checklist",
+      "title": "State law checklist",
+      "path": "07-Legal-Tax/State law checklist.md",
+      "source_ids": [
+        "trec_interest"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-tax-basis",
+      "title": "Tax basis",
+      "path": "07-Legal-Tax/Tax basis.md",
+      "source_ids": [
+        "irs_basis"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-depreciation-review",
+      "title": "Depreciation review",
+      "path": "07-Legal-Tax/Depreciation review.md",
+      "source_ids": [
+        "irs_rental"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-rental-income-records",
+      "title": "Rental income records",
+      "path": "07-Legal-Tax/Rental income records.md",
+      "source_ids": [
+        "irs_rental"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-expense-classification",
+      "title": "Expense classification",
+      "path": "07-Legal-Tax/Expense classification.md",
+      "source_ids": [
+        "irs_rental",
+        "irs_basis"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-disposition-tax-review",
+      "title": "Disposition tax review",
+      "path": "07-Legal-Tax/Disposition tax review.md",
+      "source_ids": [
+        "irs_disposition"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-exchange-planning",
+      "title": "Exchange planning",
+      "path": "07-Legal-Tax/Exchange planning.md",
+      "source_ids": [
+        "irs_disposition"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-fair-housing-review",
+      "title": "Fair housing review",
+      "path": "07-Legal-Tax/Fair housing review.md",
+      "source_ids": [
+        "hud_fair"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-marketing-review",
+      "title": "Marketing review",
+      "path": "07-Legal-Tax/Marketing review.md",
+      "source_ids": [
+        "trec_interest",
+        "sec_solicitation"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-general-solicitation",
+      "title": "General solicitation",
+      "path": "07-Legal-Tax/General solicitation.md",
+      "source_ids": [
+        "sec_solicitation"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-investor-eligibility",
+      "title": "Investor eligibility",
+      "path": "07-Legal-Tax/Investor eligibility.md",
+      "source_ids": [
+        "sec_placements"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-capital-raising-review",
+      "title": "Capital raising review",
+      "path": "07-Legal-Tax/Capital raising review.md",
+      "source_ids": [
+        "sec_offerings"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-investor-reporting",
+      "title": "Investor reporting",
+      "path": "07-Legal-Tax/Investor reporting.md",
+      "source_ids": [
+        "sec_placements"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-email-outreach-controls",
+      "title": "Email outreach controls",
+      "path": "07-Legal-Tax/Email outreach controls.md",
+      "source_ids": [
+        "ftc_email"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-telephone-outreach-controls",
+      "title": "Telephone outreach controls",
+      "path": "07-Legal-Tax/Telephone outreach controls.md",
+      "source_ids": [
+        "ftc_calls"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-evidence-provenance",
+      "title": "Evidence provenance",
+      "path": "08-Data-ML/Evidence provenance.md",
+      "source_ids": [
+        "nist"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-data-provenance",
+      "title": "Data provenance",
+      "path": "08-Data-ML/Data provenance.md",
+      "source_ids": [
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-evidence-status",
+      "title": "Evidence status",
+      "path": "08-Data-ML/Evidence status.md",
+      "source_ids": [
+        "nist"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-closed-deal-evidence",
+      "title": "Closed deal evidence",
+      "path": "08-Data-ML/Closed deal evidence.md",
+      "source_ids": [
+        "irs_disposition",
+        "cfpb_closing"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-data-freshness",
+      "title": "Data freshness",
+      "path": "08-Data-ML/Data freshness.md",
+      "source_ids": [
+        "census_api"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-data-vintage",
+      "title": "Data vintage",
+      "path": "08-Data-ML/Data vintage.md",
+      "source_ids": [
+        "fhfa_hpi",
+        "census_api"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-data-granularity",
+      "title": "Data granularity",
+      "path": "08-Data-ML/Data granularity.md",
+      "source_ids": [
+        "census_acs"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-census-api",
+      "title": "Census API",
+      "path": "08-Data-ML/Census API.md",
+      "source_ids": [
+        "census_api"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-gis-joins",
+      "title": "GIS joins",
+      "path": "08-Data-ML/GIS joins.md",
+      "source_ids": [
+        "census_api"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-entity-resolution",
+      "title": "Entity resolution",
+      "path": "08-Data-ML/Entity resolution.md",
+      "source_ids": [
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-contact-provenance",
+      "title": "Contact provenance",
+      "path": "08-Data-ML/Contact provenance.md",
+      "source_ids": [
+        "ftc_email",
+        "ftc_calls"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-responsible-crawling",
+      "title": "Responsible crawling",
+      "path": "08-Data-ML/Responsible crawling.md",
+      "source_ids": [
+        "robots"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-robots-policy",
+      "title": "Robots policy",
+      "path": "08-Data-ML/Robots policy.md",
+      "source_ids": [
+        "robots"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-sec-source-harvesting",
+      "title": "SEC source harvesting",
+      "path": "08-Data-ML/SEC source harvesting.md",
+      "source_ids": [
+        "sec_access"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-source-caching",
+      "title": "Source caching",
+      "path": "08-Data-ML/Source caching.md",
+      "source_ids": [
+        "robots",
+        "sec_access"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-classical-nlp",
+      "title": "Classical NLP",
+      "path": "08-Data-ML/Classical NLP.md",
+      "source_ids": [
+        "sklearn_text"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-tf-idf-retrieval",
+      "title": "TF IDF retrieval",
+      "path": "08-Data-ML/TF IDF retrieval.md",
+      "source_ids": [
+        "sklearn_tfidf"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-rule-based-extraction",
+      "title": "Rule based extraction",
+      "path": "08-Data-ML/Rule based extraction.md",
+      "source_ids": [
+        "sklearn_text"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-extraction-quality",
+      "title": "Extraction quality",
+      "path": "08-Data-ML/Extraction quality.md",
+      "source_ids": [
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-feature-selection",
+      "title": "Feature selection",
+      "path": "08-Data-ML/Feature selection.md",
+      "source_ids": [
+        "nist"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-temporal-validation",
+      "title": "Temporal validation",
+      "path": "08-Data-ML/Temporal validation.md",
+      "source_ids": [
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-model-validation",
+      "title": "Model validation",
+      "path": "08-Data-ML/Model validation.md",
+      "source_ids": [
+        "nist"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-model-calibration",
+      "title": "Model calibration",
+      "path": "08-Data-ML/Model calibration.md",
+      "source_ids": [
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-model-governance",
+      "title": "Model governance",
+      "path": "08-Data-ML/Model governance.md",
+      "source_ids": [
+        "nist"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-search-evaluation",
+      "title": "Search evaluation",
+      "path": "08-Data-ML/Search evaluation.md",
+      "source_ids": [
+        "sklearn_text"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-data-quality-checks",
+      "title": "Data quality checks",
+      "path": "08-Data-ML/Data quality checks.md",
+      "source_ids": [
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-data-versioning",
+      "title": "Data versioning",
+      "path": "08-Data-ML/Data versioning.md",
+      "source_ids": [
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-offline-operation",
+      "title": "Offline operation",
+      "path": "08-Data-ML/Offline operation.md",
+      "source_ids": [
+        "sklearn_text",
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "template-property-intake-template",
+      "title": "Property intake template",
+      "path": "10-Templates/Property intake template.md",
+      "source_ids": [],
+      "kind": "template"
+    },
+    {
+      "id": "template-deal-evidence-template",
+      "title": "Deal evidence template",
+      "path": "10-Templates/Deal evidence template.md",
+      "source_ids": [],
+      "kind": "template"
+    },
+    {
+      "id": "template-investment-committee-template",
+      "title": "Investment committee template",
+      "path": "10-Templates/Investment committee template.md",
+      "source_ids": [],
+      "kind": "template"
+    },
+    {
+      "id": "template-rehab-scope-template",
+      "title": "Rehab scope template",
+      "path": "10-Templates/Rehab scope template.md",
+      "source_ids": [],
+      "kind": "template"
+    },
+    {
+      "id": "template-model-card-template",
+      "title": "Model card template",
+      "path": "10-Templates/Model card template.md",
+      "source_ids": [],
+      "kind": "template"
+    },
+    {
+      "id": "template-source-registry-template",
+      "title": "Source registry template",
+      "path": "10-Templates/Source registry template.md",
+      "source_ids": [],
+      "kind": "template"
+    },
+    {
+      "id": "template-public-records-request-template",
+      "title": "Public records request template",
+      "path": "10-Templates/Public records request template.md",
+      "source_ids": [],
+      "kind": "template"
+    },
+    {
+      "id": "template-closing-reconciliation-template",
+      "title": "Closing reconciliation template",
+      "path": "10-Templates/Closing reconciliation template.md",
+      "source_ids": [],
+      "kind": "template"
+    },
+    {
+      "id": "template-investor-report-template",
+      "title": "Investor report template",
+      "path": "10-Templates/Investor report template.md",
+      "source_ids": [],
+      "kind": "template"
+    },
+    {
+      "id": "template-acquisition-experiment-template",
+      "title": "Acquisition experiment template",
+      "path": "10-Templates/Acquisition experiment template.md",
+      "source_ids": [],
+      "kind": "template"
+    }
+  ],
+  "deals": [
+    {
+      "id": "deal-0001",
+      "asset_name": "AVA Belltown",
+      "seller": "AvalonBay Communities",
+      "location": "Seattle, WA",
+      "closing_date": null,
+      "closing_period": "Q2 2024",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 100,
+      "disclosed_value_usd": 34000000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 22673000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2024q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591224000021/avb-20240930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0001 AVA Belltown.md"
+    },
+    {
+      "id": "deal-0002",
+      "asset_name": "AVA North Hollywood",
+      "seller": "AvalonBay Communities",
+      "location": "Los Angeles, CA",
+      "closing_date": null,
+      "closing_period": "Q2 2024",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 156,
+      "disclosed_value_usd": 62100000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 874000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2024q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591224000021/avb-20240930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0002 AVA North Hollywood.md"
+    },
+    {
+      "id": "deal-0003",
+      "asset_name": "Avalon Hackensack at Riverside",
+      "seller": "AvalonBay Communities",
+      "location": "Hackensack, NJ",
+      "closing_date": null,
+      "closing_period": "Q2 2024",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 226,
+      "disclosed_value_usd": 85600000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 44834000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2024q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591224000021/avb-20240930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0003 Avalon Hackensack at Riverside.md"
+    },
+    {
+      "id": "deal-0004",
+      "asset_name": "AVA Theater District",
+      "seller": "AvalonBay Communities",
+      "location": "Boston, MA",
+      "closing_date": null,
+      "closing_period": "Q3 2024",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 398,
+      "disclosed_value_usd": 212000000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 77254000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2024q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591224000021/avb-20240930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0004 AVA Theater District.md"
+    },
+    {
+      "id": "deal-0005",
+      "asset_name": "Avalon Darien",
+      "seller": "AvalonBay Communities",
+      "location": "Darien, CT",
+      "closing_date": null,
+      "closing_period": "Q3 2024",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 189,
+      "disclosed_value_usd": 120000000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 95732000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2024q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591224000021/avb-20240930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0005 Avalon Darien.md"
+    },
+    {
+      "id": "deal-0006",
+      "asset_name": "eaves Daly City",
+      "seller": "AvalonBay Communities",
+      "location": "Daly City, CA",
+      "closing_date": null,
+      "closing_period": "Q2 2023",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 195,
+      "disclosed_value_usd": 67000000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 54618000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2023q3"
+      ],
+      "source_url": "https://investors.avalonbay.com/sec-filings/all-sec-filings/content/0000915912-23-000018/avb-20230930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0006 eaves Daly City.md"
+    },
+    {
+      "id": "deal-0007",
+      "asset_name": "Avalon at Newton Highlands",
+      "seller": "AvalonBay Communities",
+      "location": "Newton, MA",
+      "closing_date": null,
+      "closing_period": "Q2 2023",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 294,
+      "disclosed_value_usd": 170000000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 132723000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2023q3"
+      ],
+      "source_url": "https://investors.avalonbay.com/sec-filings/all-sec-filings/content/0000915912-23-000018/avb-20230930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0007 Avalon at Newton Highlands.md"
+    },
+    {
+      "id": "deal-0008",
+      "asset_name": "Avalon Columbia Pike",
+      "seller": "AvalonBay Communities",
+      "location": "Arlington, VA",
+      "closing_date": null,
+      "closing_period": "Q3 2023",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 269,
+      "disclosed_value_usd": 105000000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 22345000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2023q3"
+      ],
+      "source_url": "https://investors.avalonbay.com/sec-filings/all-sec-filings/content/0000915912-23-000018/avb-20230930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0008 Avalon Columbia Pike.md"
+    },
+    {
+      "id": "deal-0009",
+      "asset_name": "Avalon West Long Branch",
+      "seller": "AvalonBay Communities",
+      "location": "West Long Branch, NJ",
+      "closing_date": null,
+      "closing_period": "Q1 2022",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 180,
+      "disclosed_value_usd": 75000000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 56434000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2022q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591222000020/avb-20220930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0009 Avalon West Long Branch.md"
+    },
+    {
+      "id": "deal-0010",
+      "asset_name": "Avalon Ossining",
+      "seller": "AvalonBay Communities",
+      "location": "Ossining, NY",
+      "closing_date": null,
+      "closing_period": "Q1 2022",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 168,
+      "disclosed_value_usd": 70000000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 40512000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2022q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591222000020/avb-20220930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0010 Avalon Ossining.md"
+    },
+    {
+      "id": "deal-0011",
+      "asset_name": "Avalon East Norwalk",
+      "seller": "AvalonBay Communities",
+      "location": "Norwalk, CT",
+      "closing_date": null,
+      "closing_period": "Q1 2022",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 240,
+      "disclosed_value_usd": 90000000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 51762000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2022q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591222000020/avb-20220930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0011 Avalon East Norwalk.md"
+    },
+    {
+      "id": "deal-0012",
+      "asset_name": "Avalon Green I-II-III",
+      "seller": "AvalonBay Communities",
+      "location": "Elmsford, NY",
+      "closing_date": null,
+      "closing_period": "Q3 2022",
+      "date_precision": "quarter",
+      "transaction_type": "portfolio_asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 617,
+      "disclosed_value_usd": 306000000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 196466000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2022q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591222000020/avb-20220930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0012 Avalon Green I-II-III.md"
+    },
+    {
+      "id": "deal-0013",
+      "asset_name": "Avalon Del Mar Station",
+      "seller": "AvalonBay Communities",
+      "location": "Pasadena, CA",
+      "closing_date": null,
+      "closing_period": "Q3 2022",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 347,
+      "disclosed_value_usd": 172300000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 77141000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2022q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591222000020/avb-20220930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0013 Avalon Del Mar Station.md"
+    },
+    {
+      "id": "deal-0014",
+      "asset_name": "Avalon Sharon",
+      "seller": "AvalonBay Communities",
+      "location": "Sharon, MA",
+      "closing_date": null,
+      "closing_period": "Q3 2022",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 156,
+      "disclosed_value_usd": 65650000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 44355000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2022q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591222000020/avb-20220930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0014 Avalon Sharon.md"
+    },
+    {
+      "id": "deal-0015",
+      "asset_name": "eaves Stamford",
+      "seller": "AvalonBay Communities",
+      "location": "Stamford, CT",
+      "closing_date": null,
+      "closing_period": "Q1 2021",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 238,
+      "disclosed_value_usd": 72000000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 53775000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2021q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591221000023/avb-20210930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0015 eaves Stamford.md"
+    },
+    {
+      "id": "deal-0016",
+      "asset_name": "Avalon Norwalk",
+      "seller": "AvalonBay Communities",
+      "location": "Norwalk, CT",
+      "closing_date": null,
+      "closing_period": "Q2 2021",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 311,
+      "disclosed_value_usd": 103000000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 48912000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2021q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591221000023/avb-20210930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0016 Avalon Norwalk.md"
+    },
+    {
+      "id": "deal-0017",
+      "asset_name": "AVA Cortez Hill",
+      "seller": "AvalonBay Communities",
+      "location": "San Diego, CA",
+      "closing_date": null,
+      "closing_period": "Q2 2021",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 299,
+      "disclosed_value_usd": 96500000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 75716000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2021q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591221000023/avb-20210930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0017 AVA Cortez Hill.md"
+    },
+    {
+      "id": "deal-0018",
+      "asset_name": "Avalon Redmond Place",
+      "seller": "AvalonBay Communities",
+      "location": "Redmond, WA",
+      "closing_date": null,
+      "closing_period": "Q2 2021",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 222,
+      "disclosed_value_usd": 97700000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 72929000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2021q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591221000023/avb-20210930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0018 Avalon Redmond Place.md"
+    },
+    {
+      "id": "deal-0019",
+      "asset_name": "Avalon Bronxville",
+      "seller": "AvalonBay Communities",
+      "location": "Bronxville, NY",
+      "closing_date": null,
+      "closing_period": "Q2 2021",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 110,
+      "disclosed_value_usd": 89000000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 71773000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2021q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591221000023/avb-20210930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0019 Avalon Bronxville.md"
+    },
+    {
+      "id": "deal-0020",
+      "asset_name": "Avalon Glen Cove and Glen Cove North",
+      "seller": "AvalonBay Communities",
+      "location": "Glen Cove, NY",
+      "closing_date": null,
+      "closing_period": "Q2 2021",
+      "date_precision": "quarter",
+      "transaction_type": "portfolio_asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 367,
+      "disclosed_value_usd": 126000000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 65242000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2021q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591221000023/avb-20210930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0020 Avalon Glen Cove and Glen Cove North.md"
+    },
+    {
+      "id": "deal-0021",
+      "asset_name": "Avalon Shelton",
+      "seller": "AvalonBay Communities",
+      "location": "Shelton, CT",
+      "closing_date": null,
+      "closing_period": "Q1 2020",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 250,
+      "disclosed_value_usd": 64750000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 24413000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2020q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591220000027/avb-20200930.htm",
+      "source_locator": "Note 6, disposition table; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0021 Avalon Shelton.md"
+    },
+    {
+      "id": "deal-0022",
+      "asset_name": "Avalon Tinton Falls",
+      "seller": "AvalonBay Communities",
+      "location": "Tinton Falls, NJ",
+      "closing_date": null,
+      "closing_period": "Q2 2020",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 216,
+      "disclosed_value_usd": 64900000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 35297000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2020q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591220000027/avb-20200930.htm",
+      "source_locator": "Note 6, disposition table; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0022 Avalon Tinton Falls.md"
+    },
+    {
+      "id": "deal-0023",
+      "asset_name": "Avalon Wilton on River Road",
+      "seller": "AvalonBay Communities",
+      "location": "Wilton, CT",
+      "closing_date": null,
+      "closing_period": "Q1 2025",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 102,
+      "disclosed_value_usd": 65100000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 56476000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2025q2"
+      ],
+      "source_url": "https://investors.avalonbay.com/sec-filings/all-sec-filings/content/0000915912-25-000019/avb-20250630.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0023 Avalon Wilton on River Road.md"
+    },
+    {
+      "id": "deal-0024",
+      "asset_name": "Avalon Wesmont Station I and II",
+      "seller": "AvalonBay Communities",
+      "location": "Wood-Ridge, NJ",
+      "closing_date": null,
+      "closing_period": "Q2 2025",
+      "date_precision": "quarter",
+      "transaction_type": "portfolio_asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 406,
+      "disclosed_value_usd": 161500000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 99636000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2025q2"
+      ],
+      "source_url": "https://investors.avalonbay.com/sec-filings/all-sec-filings/content/0000915912-25-000019/avb-20250630.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0024 Avalon Wesmont Station I and II.md"
+    },
+    {
+      "id": "deal-0025",
+      "asset_name": "Avalon Sunset Towers",
+      "seller": "AvalonBay Communities",
+      "location": "San Francisco, CA",
+      "closing_date": null,
+      "closing_period": "Q1 2026",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 243,
+      "disclosed_value_usd": 105000000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 85567000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2026q1"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591226000012/avb-20260331.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0025 Avalon Sunset Towers.md"
+    },
+    {
+      "id": "deal-0026",
+      "asset_name": "Avalon White Plains",
+      "seller": "AvalonBay Communities",
+      "location": "White Plains, NY",
+      "closing_date": null,
+      "closing_period": "Q1 2026",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 407,
+      "disclosed_value_usd": 166000000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 84408000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2026q1"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591226000012/avb-20260331.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0026 Avalon White Plains.md"
+    },
+    {
+      "id": "deal-0027",
+      "asset_name": "Avalon The Albemarle",
+      "seller": "AvalonBay Communities",
+      "location": "Washington, DC",
+      "closing_date": null,
+      "closing_period": "Q1 2026",
+      "date_precision": "quarter",
+      "transaction_type": "asset_sale",
+      "interest_sold_pct": 100.0,
+      "unit_count": 234,
+      "disclosed_value_usd": 69750000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 9713000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2026q1"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591226000012/avb-20260331.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. ",
+      "note_path": "09-Closed-Deals/deal-0027 Avalon The Albemarle.md"
+    },
+    {
+      "id": "deal-0028",
+      "asset_name": "Avalon New Canaan-Berkeley-AVA Ballard Q4 aggregate",
+      "seller": "AvalonBay Communities",
+      "location": "New Canaan, CT / Berkeley, CA / Seattle, WA",
+      "closing_date": null,
+      "closing_period": "Q4 2024",
+      "date_precision": "quarter",
+      "transaction_type": "aggregate_completed_asset_sales",
+      "interest_sold_pct": 100.0,
+      "unit_count": 463,
+      "disclosed_value_usd": 212500000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 121841000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2024q4"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591225000003/q42024ex-992.htm",
+      "source_locator": "Disposition Activity, Q4 2024; dollars stated in whole USD",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Aggregate for three communities only; no individual gain allocation is disclosed here. Economic Gain separately reported as USD 69,949,000 under issuer methodology.",
+      "note_path": "09-Closed-Deals/deal-0028 Avalon New Canaan-Berkeley-AVA Ballard Q4 aggregate.md"
+    },
+    {
+      "id": "deal-0029",
+      "asset_name": "The Park Loggia 2020 nine-month condo sales",
+      "seller": "AvalonBay Communities",
+      "location": "New York, NY",
+      "closing_date": null,
+      "closing_period": "2020-01-01 through 2020-09-30",
+      "date_precision": "period",
+      "transaction_type": "aggregate_completed_condominium_sales",
+      "interest_sold_pct": 100.0,
+      "unit_count": 59,
+      "disclosed_value_usd": 182512000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 8174000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2020q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591220000027/avb-20200930.htm",
+      "source_locator": "Note 6, disposition table; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Marketing and administrative costs of USD 4,012,000 were separately reported for the nine months; the selected reported gain excludes these separately listed costs.",
+      "note_path": "09-Closed-Deals/deal-0029 The Park Loggia 2020 nine-month condo sales.md"
+    },
+    {
+      "id": "deal-0030",
+      "asset_name": "The Park Loggia 2021 nine-month condo sales",
+      "seller": "AvalonBay Communities",
+      "location": "New York, NY",
+      "closing_date": null,
+      "closing_period": "2021-01-01 through 2021-09-30",
+      "date_precision": "period",
+      "transaction_type": "aggregate_completed_condominium_sales",
+      "interest_sold_pct": 100.0,
+      "unit_count": 43,
+      "disclosed_value_usd": 107278000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 2051000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2021q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591221000023/avb-20210930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_transaction_gain_negative_after_selected_period_costs",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. The selected reported gain is positive before separately reported marketing, operating and administrative costs of USD 3,453,000; the broader period result after those costs is negative. This is not a net-profitable cash case.",
+      "note_path": "09-Closed-Deals/deal-0030 The Park Loggia 2021 nine-month condo sales.md"
+    },
+    {
+      "id": "deal-0031",
+      "asset_name": "The Park Loggia 2022 nine-month condo sales",
+      "seller": "AvalonBay Communities",
+      "location": "New York, NY",
+      "closing_date": null,
+      "closing_period": "2022-01-01 through 2022-09-30",
+      "date_precision": "period",
+      "transaction_type": "aggregate_completed_condominium_sales",
+      "interest_sold_pct": 100.0,
+      "unit_count": 38,
+      "disclosed_value_usd": 120328000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 2113000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2022q3"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000091591222000020/avb-20220930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Marketing, operating and administrative costs of USD 1,644,000 were separately reported; selected gain is before those costs.",
+      "note_path": "09-Closed-Deals/deal-0031 The Park Loggia 2022 nine-month condo sales.md"
+    },
+    {
+      "id": "deal-0032",
+      "asset_name": "The Park Loggia 2023 nine-month condo sales",
+      "seller": "AvalonBay Communities",
+      "location": "New York, NY",
+      "closing_date": null,
+      "closing_period": "2023-01-01 through 2023-09-30",
+      "date_precision": "period",
+      "transaction_type": "aggregate_completed_condominium_sales",
+      "interest_sold_pct": 100.0,
+      "unit_count": 4,
+      "disclosed_value_usd": 19397000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 461000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "avb2023q3"
+      ],
+      "source_url": "https://investors.avalonbay.com/sec-filings/all-sec-filings/content/0000915912-23-000018/avb-20230930.htm",
+      "source_locator": "Note 6, Real Estate Disposition Activities; table dollars in thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Marketing, operating and administrative costs of USD 272,000 were separately reported; selected gain is before those costs.",
+      "note_path": "09-Closed-Deals/deal-0032 The Park Loggia 2023 nine-month condo sales.md"
+    },
+    {
+      "id": "deal-0033",
+      "asset_name": "One Vanderbilt Avenue 11 percent sale",
+      "seller": "SL Green Realty",
+      "location": "New York, NY",
+      "closing_date": null,
+      "closing_period": "2024-11",
+      "date_precision": "month",
+      "transaction_type": "joint_venture_interest_sale",
+      "interest_sold_pct": 11.0,
+      "unit_count": null,
+      "disclosed_value_usd": 4700000000,
+      "disclosed_value_type": "gross_whole_asset_valuation",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 187600000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "seller_share",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "slg2024jv"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1040971/000104097125000019/R26.htm",
+      "source_locator": "Disposition of Joint Venture Interests or Properties; values in millions",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Gross asset valuation is not the seller's proceeds. Table gains are seller share, include accrued compensation adjustments at reporting-period level, and exclude later expense adjustments.",
+      "note_path": "09-Closed-Deals/deal-0033 One Vanderbilt Avenue 11 percent sale.md"
+    },
+    {
+      "id": "deal-0034",
+      "asset_name": "717 Fifth Avenue 10.92 percent sale",
+      "seller": "SL Green Realty",
+      "location": "New York, NY",
+      "closing_date": null,
+      "closing_period": "2024-01",
+      "date_precision": "month",
+      "transaction_type": "joint_venture_interest_sale",
+      "interest_sold_pct": 10.92,
+      "unit_count": null,
+      "disclosed_value_usd": 963000000,
+      "disclosed_value_type": "gross_whole_asset_valuation",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 26900000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "seller_share",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "slg2024jv"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1040971/000104097125000019/R26.htm",
+      "source_locator": "Disposition of Joint Venture Interests or Properties; values in millions",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Gross asset valuation is not the seller's proceeds. Table gains are seller share, include accrued compensation adjustments at reporting-period level, and exclude later expense adjustments.",
+      "note_path": "09-Closed-Deals/deal-0034 717 Fifth Avenue 10.92 percent sale.md"
+    },
+    {
+      "id": "deal-0035",
+      "asset_name": "One Vanderbilt Avenue 5 percent sale",
+      "seller": "SL Green Realty",
+      "location": "New York, NY",
+      "closing_date": null,
+      "closing_period": "2025-09",
+      "date_precision": "month",
+      "transaction_type": "joint_venture_interest_sale",
+      "interest_sold_pct": 5.0,
+      "unit_count": null,
+      "disclosed_value_usd": 4700000000,
+      "disclosed_value_type": "gross_whole_asset_valuation",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 88100000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "seller_share",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "slg2025jv"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1040971/000162828026008669/R50.htm",
+      "source_locator": "Disposition table; gross asset values and seller share gains in millions",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. The annual table reports USD 88.1 million seller-share gain; the earlier quarterly table reported USD 87.3 million. This record uses the later annual figure. USD 4.7 billion is whole-asset valuation, not seller proceeds.",
+      "note_path": "09-Closed-Deals/deal-0035 One Vanderbilt Avenue 5 percent sale.md"
+    },
+    {
+      "id": "deal-0036",
+      "asset_name": "605 West 42nd Street Sky 20 percent sale",
+      "seller": "SL Green Realty",
+      "location": "New York, NY",
+      "closing_date": null,
+      "closing_period": "2021-06",
+      "date_precision": "month",
+      "transaction_type": "joint_venture_interest_sale",
+      "interest_sold_pct": 20.0,
+      "unit_count": null,
+      "disclosed_value_usd": 858100000,
+      "disclosed_value_type": "gross_whole_asset_valuation",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 8900000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "seller_share",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "slg2021jv"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1040971/000104097122000014/R49.htm",
+      "source_locator": "Disposition table for 2021, 2020 and 2019; values in millions",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Table gains are seller share and may reflect transaction accounting beyond gross asset valuation; never infer a negative cost basis from subtraction. Subsequent expense adjustments are excluded.",
+      "note_path": "09-Closed-Deals/deal-0036 605 West 42nd Street Sky 20 percent sale.md"
+    },
+    {
+      "id": "deal-0037",
+      "asset_name": "333 East 22nd Street 33.33 percent sale",
+      "seller": "SL Green Realty",
+      "location": "New York, NY",
+      "closing_date": null,
+      "closing_period": "2020-12",
+      "date_precision": "month",
+      "transaction_type": "joint_venture_interest_sale",
+      "interest_sold_pct": 33.33,
+      "unit_count": null,
+      "disclosed_value_usd": 1600000,
+      "disclosed_value_type": "gross_whole_asset_valuation",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 3000000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "seller_share",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "slg2021jv"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1040971/000104097122000014/R49.htm",
+      "source_locator": "Disposition table for 2021, 2020 and 2019; values in millions",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Table gains are seller share and may reflect transaction accounting beyond gross asset valuation; never infer a negative cost basis from subtraction. Subsequent expense adjustments are excluded.",
+      "note_path": "09-Closed-Deals/deal-0037 333 East 22nd Street 33.33 percent sale.md"
+    },
+    {
+      "id": "deal-0038",
+      "asset_name": "21 East 66th Street one residential unit",
+      "seller": "SL Green Realty",
+      "location": "New York, NY",
+      "closing_date": null,
+      "closing_period": "2019-12",
+      "date_precision": "month",
+      "transaction_type": "joint_venture_interest_sale",
+      "interest_sold_pct": null,
+      "unit_count": null,
+      "disclosed_value_usd": 2900000,
+      "disclosed_value_type": "gross_whole_asset_valuation",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 300000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "seller_share",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "slg2021jv"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1040971/000104097122000014/R49.htm",
+      "source_locator": "Disposition table for 2021, 2020 and 2019; values in millions",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Table gains are seller share and may reflect transaction accounting beyond gross asset valuation; never infer a negative cost basis from subtraction. Subsequent expense adjustments are excluded.",
+      "note_path": "09-Closed-Deals/deal-0038 21 East 66th Street one residential unit.md"
+    },
+    {
+      "id": "deal-0039",
+      "asset_name": "521 Fifth Avenue 50.50 percent sale",
+      "seller": "SL Green Realty",
+      "location": "New York, NY",
+      "closing_date": null,
+      "closing_period": "2019-05",
+      "date_precision": "month",
+      "transaction_type": "joint_venture_interest_sale",
+      "interest_sold_pct": 50.5,
+      "unit_count": null,
+      "disclosed_value_usd": 381000000,
+      "disclosed_value_type": "gross_whole_asset_valuation",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 57900000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "seller_share",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "slg2021jv"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1040971/000104097122000014/R49.htm",
+      "source_locator": "Disposition table for 2021, 2020 and 2019; values in millions",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Table gains are seller share and may reflect transaction accounting beyond gross asset valuation; never infer a negative cost basis from subtraction. Subsequent expense adjustments are excluded.",
+      "note_path": "09-Closed-Deals/deal-0039 521 Fifth Avenue 50.50 percent sale.md"
+    },
+    {
+      "id": "deal-0040",
+      "asset_name": "131-137 Spring Street 20 percent sale",
+      "seller": "SL Green Realty",
+      "location": "New York, NY",
+      "closing_date": null,
+      "closing_period": "2019-01",
+      "date_precision": "month",
+      "transaction_type": "joint_venture_interest_sale",
+      "interest_sold_pct": 20.0,
+      "unit_count": null,
+      "disclosed_value_usd": 216000000,
+      "disclosed_value_type": "gross_whole_asset_valuation",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 17700000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "seller_share",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "slg2021jv"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1040971/000104097122000014/R49.htm",
+      "source_locator": "Disposition table for 2021, 2020 and 2019; values in millions",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Table gains are seller share and may reflect transaction accounting beyond gross asset valuation; never infer a negative cost basis from subtraction. Subsequent expense adjustments are excluded.",
+      "note_path": "09-Closed-Deals/deal-0040 131-137 Spring Street 20 percent sale.md"
+    },
+    {
+      "id": "deal-0041",
+      "asset_name": "Hillsdale Garden 81.5 percent interest",
+      "seller": "Essex Property Trust",
+      "location": "California",
+      "closing_date": null,
+      "closing_period": "2024-10",
+      "date_precision": "month",
+      "transaction_type": "consolidated_interest_sale",
+      "interest_sold_pct": 81.5,
+      "unit_count": 697,
+      "disclosed_value_usd": 252400000,
+      "disclosed_value_type": "gross_contract_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 175600000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "ess2024"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/920522/000092052225000024/R19.htm",
+      "source_locator": "Note Dispositions of Real Estate Interests; USD millions",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Pro-rata contract price separately disclosed as USD 205,700,000. Reported consolidated gain must not be treated as an 81.5 percent cash-profit distribution.",
+      "note_path": "09-Closed-Deals/deal-0041 Hillsdale Garden 81.5 percent interest.md"
+    },
+    {
+      "id": "deal-0042",
+      "asset_name": "Dabney East",
+      "seller": "Brandywine Realty Trust",
+      "location": "Richmond, VA",
+      "closing_date": "2023-12-27",
+      "closing_period": "2023-12-27",
+      "date_precision": "day",
+      "transaction_type": "land_sale",
+      "interest_sold_pct": null,
+      "unit_count": null,
+      "disclosed_value_usd": 1600000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 430000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "bdn2023"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1060386/000079081624000014/R46.htm",
+      "source_locator": "Real Estate Investments, Schedule of Office Properties Sold and footnotes; values USD thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Table gain is reported net of closing and other transaction-related costs. Interest percentage is not specified in the selected table. Full investment cash profit is still unavailable.",
+      "note_path": "09-Closed-Deals/deal-0042 Dabney East.md"
+    },
+    {
+      "id": "deal-0043",
+      "asset_name": "Byberry",
+      "seller": "Brandywine Realty Trust",
+      "location": "Philadelphia, PA",
+      "closing_date": "2023-12-07",
+      "closing_period": "2023-12-07",
+      "date_precision": "day",
+      "transaction_type": "land_purchase_option_sale",
+      "interest_sold_pct": null,
+      "unit_count": null,
+      "disclosed_value_usd": 9641000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 3960000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "bdn2023"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1060386/000079081624000014/R46.htm",
+      "source_locator": "Real Estate Investments, Schedule of Office Properties Sold and footnotes; values USD thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Table gain is reported net of closing and other transaction-related costs. Interest percentage is not specified in the selected table. Full investment cash profit is still unavailable.",
+      "note_path": "09-Closed-Deals/deal-0043 Byberry.md"
+    },
+    {
+      "id": "deal-0044",
+      "asset_name": "200 N Radnor Chester Road",
+      "seller": "Brandywine Realty Trust",
+      "location": "Radnor, PA",
+      "closing_date": "2023-10-31",
+      "closing_period": "2023-10-31",
+      "date_precision": "day",
+      "transaction_type": "retail_asset_sale",
+      "interest_sold_pct": null,
+      "unit_count": null,
+      "disclosed_value_usd": 14200000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 7735000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "bdn2023"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1060386/000079081624000014/R46.htm",
+      "source_locator": "Real Estate Investments, Schedule of Office Properties Sold and footnotes; values USD thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Table gain is reported net of closing and other transaction-related costs. Interest percentage is not specified in the selected table. Full investment cash profit is still unavailable.",
+      "note_path": "09-Closed-Deals/deal-0044 200 N Radnor Chester Road.md"
+    },
+    {
+      "id": "deal-0045",
+      "asset_name": "200 Barr Harbor Drive",
+      "seller": "Brandywine Realty Trust",
+      "location": "West Conshohocken, PA",
+      "closing_date": "2022-11-22",
+      "closing_period": "2022-11-22",
+      "date_precision": "day",
+      "transaction_type": "office_asset_sale",
+      "interest_sold_pct": null,
+      "unit_count": null,
+      "disclosed_value_usd": 30500000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 8740000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "bdn2023"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1060386/000079081624000014/R46.htm",
+      "source_locator": "Real Estate Investments, Schedule of Office Properties Sold and footnotes; values USD thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Table gain is reported net of closing and other transaction-related costs. Interest percentage is not specified in the selected table. Full investment cash profit is still unavailable.",
+      "note_path": "09-Closed-Deals/deal-0045 200 Barr Harbor Drive.md"
+    },
+    {
+      "id": "deal-0046",
+      "asset_name": "Gibbsboro Portfolio",
+      "seller": "Brandywine Realty Trust",
+      "location": "Gibbsboro, NJ",
+      "closing_date": "2022-06-28",
+      "closing_period": "2022-06-28",
+      "date_precision": "day",
+      "transaction_type": "portfolio_asset_sale",
+      "interest_sold_pct": null,
+      "unit_count": null,
+      "disclosed_value_usd": 4100000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 831000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "bdn2023"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1060386/000079081624000014/R46.htm",
+      "source_locator": "Real Estate Investments, Schedule of Office Properties Sold and footnotes; values USD thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Table gain is reported net of closing and other transaction-related costs. Interest percentage is not specified in the selected table. Full investment cash profit is still unavailable.",
+      "note_path": "09-Closed-Deals/deal-0046 Gibbsboro Portfolio.md"
+    },
+    {
+      "id": "deal-0047",
+      "asset_name": "25 M Street",
+      "seller": "Brandywine Realty Trust",
+      "location": "Washington, DC",
+      "closing_date": "2022-04-14",
+      "closing_period": "2022-04-14",
+      "date_precision": "day",
+      "transaction_type": "land_sale",
+      "interest_sold_pct": null,
+      "unit_count": null,
+      "disclosed_value_usd": 29675000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 3836000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "bdn2023"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1060386/000079081624000014/R46.htm",
+      "source_locator": "Real Estate Investments, Schedule of Office Properties Sold and footnotes; values USD thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Table gain is reported net of closing and other transaction-related costs. Interest percentage is not specified in the selected table. Full investment cash profit is still unavailable.",
+      "note_path": "09-Closed-Deals/deal-0047 25 M Street.md"
+    },
+    {
+      "id": "deal-0048",
+      "asset_name": "Gateway G and H",
+      "seller": "Brandywine Realty Trust",
+      "location": "Richmond, VA",
+      "closing_date": "2022-01-20",
+      "closing_period": "2022-01-20",
+      "date_precision": "day",
+      "transaction_type": "land_sale",
+      "interest_sold_pct": null,
+      "unit_count": null,
+      "disclosed_value_usd": 1600000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 897000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "bdn2023"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1060386/000079081624000014/R46.htm",
+      "source_locator": "Real Estate Investments, Schedule of Office Properties Sold and footnotes; values USD thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Table gain is reported net of closing and other transaction-related costs. Interest percentage is not specified in the selected table. Full investment cash profit is still unavailable.",
+      "note_path": "09-Closed-Deals/deal-0048 Gateway G and H.md"
+    },
+    {
+      "id": "deal-0049",
+      "asset_name": "1100 Lenox Drive",
+      "seller": "Brandywine Realty Trust",
+      "location": "Lawrenceville, NJ",
+      "closing_date": "2021-09-08",
+      "closing_period": "2021-09-08",
+      "date_precision": "day",
+      "transaction_type": "land_sale",
+      "interest_sold_pct": null,
+      "unit_count": null,
+      "disclosed_value_usd": 2575000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 68000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "bdn2023"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1060386/000079081624000014/R46.htm",
+      "source_locator": "Real Estate Investments, Schedule of Office Properties Sold and footnotes; values USD thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Table gain is reported net of closing and other transaction-related costs. Interest percentage is not specified in the selected table. Full investment cash profit is still unavailable.",
+      "note_path": "09-Closed-Deals/deal-0049 1100 Lenox Drive.md"
+    },
+    {
+      "id": "deal-0050",
+      "asset_name": "2100-2200 Lenox Drive",
+      "seller": "Brandywine Realty Trust",
+      "location": "Lawrenceville, NJ",
+      "closing_date": "2021-07-06",
+      "closing_period": "2021-07-06",
+      "date_precision": "day",
+      "transaction_type": "land_sale",
+      "interest_sold_pct": null,
+      "unit_count": null,
+      "disclosed_value_usd": 8900000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 842000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "bdn2023"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1060386/000079081624000014/R46.htm",
+      "source_locator": "Real Estate Investments, Schedule of Office Properties Sold and footnotes; values USD thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Table gain is reported net of closing and other transaction-related costs. Interest percentage is not specified in the selected table. Full investment cash profit is still unavailable.",
+      "note_path": "09-Closed-Deals/deal-0050 2100-2200 Lenox Drive.md"
+    },
+    {
+      "id": "deal-0051",
+      "asset_name": "3025 JFK Boulevard",
+      "seller": "Brandywine Realty Trust",
+      "location": "Philadelphia, PA",
+      "closing_date": "2021-02-02",
+      "closing_period": "2021-02-02",
+      "date_precision": "day",
+      "transaction_type": "leasehold_interest_sale",
+      "interest_sold_pct": null,
+      "unit_count": null,
+      "disclosed_value_usd": 34800000,
+      "disclosed_value_type": "gross_sales_price",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 2000000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "bdn2023"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1060386/000079081624000014/R46.htm",
+      "source_locator": "Real Estate Investments, Schedule of Office Properties Sold and footnotes; values USD thousands",
+      "evidence_status": "completed_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Table gain is reported net of closing and other transaction-related costs. Interest percentage is not specified in the selected table. Full investment cash profit is still unavailable.",
+      "note_path": "09-Closed-Deals/deal-0051 3025 JFK Boulevard.md"
+    },
+    {
+      "id": "deal-0052",
+      "asset_name": "3151 Market Street JV contribution",
+      "seller": "Brandywine Realty Trust",
+      "location": "Philadelphia, PA",
+      "closing_date": "2022-07-14",
+      "closing_period": "2022-07-14",
+      "date_precision": "day",
+      "transaction_type": "joint_venture_non_cash_contribution",
+      "interest_sold_pct": null,
+      "unit_count": null,
+      "disclosed_value_usd": 30394000,
+      "disclosed_value_type": "deemed_contribution_value",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 2583000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "bdn2023"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1060386/000079081624000014/R46.htm",
+      "source_locator": "Real Estate Investments, Schedule of Office Properties Sold and footnotes; values USD thousands",
+      "evidence_status": "completed_non_cash_contribution_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Completed contribution and deconsolidation with recognized gain; it is not a cash sale or realized investor cash profit.",
+      "note_path": "09-Closed-Deals/deal-0052 3151 Market Street JV contribution.md"
+    },
+    {
+      "id": "deal-0053",
+      "asset_name": "11501 Burnett Road JV contribution",
+      "seller": "Brandywine Realty Trust",
+      "location": "Austin, TX",
+      "closing_date": "2022-07-29",
+      "closing_period": "2022-07-29",
+      "date_precision": "day",
+      "transaction_type": "joint_venture_non_cash_contribution",
+      "interest_sold_pct": null,
+      "unit_count": null,
+      "disclosed_value_usd": 32513000,
+      "disclosed_value_type": "deemed_contribution_value",
+      "net_cash_proceeds_usd": null,
+      "cost_basis_usd": null,
+      "reported_gain_usd": 8340000,
+      "measurement_type": "reported_accounting_disposition_gain",
+      "gain_scope": "consolidated_reported",
+      "realized_cash_profit_usd": null,
+      "realized_irr": null,
+      "source_ids": [
+        "bdn2023"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1060386/000079081624000014/R46.htm",
+      "source_locator": "Real Estate Investments, Schedule of Office Properties Sold and footnotes; values USD thousands",
+      "evidence_status": "completed_non_cash_contribution_positive_reported_gain",
+      "accessed_utc": "2026-10-03",
+      "limitations": "Original purchase price, complete holding-period cash flows, financing costs, taxes and overhead are not disclosed in this selected transaction record. Reported gain is not cash profit or IRR. Completed contribution and deconsolidation with recognized gain; it is not a cash sale or realized investor cash profit.",
+      "note_path": "09-Closed-Deals/deal-0053 11501 Burnett Road JV contribution.md"
+    }
+  ],
+  "source_ids": [
+    "occ_cre",
+    "occ_refinance",
+    "fed_concentration",
+    "cfpb_closing",
+    "cfpb_documents",
+    "cfpb_title",
+    "cfpb_walkthrough",
+    "irs_rental",
+    "irs_disposition",
+    "irs_basis",
+    "epa_aai",
+    "epa_aai_checklist",
+    "epa_liability",
+    "epa_lead",
+    "epa_rrp",
+    "hud_fair",
+    "fema_map",
+    "fema_risk",
+    "census_acs",
+    "census_api",
+    "census_bps",
+    "census_soc",
+    "census_hvs",
+    "census_vacancy",
+    "fhfa_hpi",
+    "fhfa_method",
+    "fnma_sales",
+    "fnma_comps",
+    "fnma_value",
+    "fnma_reserves",
+    "freddie_condition",
+    "freddie_appraisal",
+    "freddie_underwrite",
+    "denver_zoning",
+    "denver_permits",
+    "denver_historic",
+    "trec_interest",
+    "trec_seller",
+    "sec_offerings",
+    "sec_solicitation",
+    "sec_placements",
+    "ftc_email",
+    "ftc_calls",
+    "foia",
+    "foia_faq",
+    "nist",
+    "nist_playbook",
+    "sklearn_text",
+    "sklearn_tfidf",
+    "robots",
+    "sec_access",
+    "energy",
+    "energy_sample",
+    "avb2024q3",
+    "avb2023q3",
+    "avb2022q3",
+    "avb2021q3",
+    "avb2020q3",
+    "avb2025q2",
+    "avb2026q1",
+    "avb2024q4",
+    "slg2024jv",
+    "slg2025jv",
+    "slg2021jv",
+    "ess2024",
+    "bdn2023"
+  ],
+  "transaction_type_counts": {
+    "asset_sale": 24,
+    "portfolio_asset_sale": 4,
+    "aggregate_completed_asset_sales": 1,
+    "aggregate_completed_condominium_sales": 4,
+    "joint_venture_interest_sale": 8,
+    "consolidated_interest_sale": 1,
+    "land_sale": 5,
+    "land_purchase_option_sale": 1,
+    "retail_asset_sale": 1,
+    "office_asset_sale": 1,
+    "leasehold_interest_sale": 1,
+    "joint_venture_non_cash_contribution": 2
+  }
+}

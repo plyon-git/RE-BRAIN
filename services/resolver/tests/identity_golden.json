@@ -1,0 +1,269 @@
+{
+  "identity_contract_version": "1",
+  "valid": [
+    {
+      "name": "parcel punctuation and leading zeros",
+      "record": {
+        "county_fips": "08031",
+        "parcel_id": "00-01. a / 07",
+        "address": "123 Main St.",
+        "state": " co "
+      },
+      "expected": {
+        "property_id": "08031-0001A07",
+        "normalized_parcel_id": "0001A07",
+        "address_key": "123 MAIN ST|CO"
+      }
+    },
+    {
+      "name": "different county same parcel",
+      "record": {
+        "county_fips": "08059",
+        "parcel_id": "00-01. a / 07",
+        "address": "123 Main St.",
+        "state": "CO"
+      },
+      "expected": {
+        "property_id": "08059-0001A07",
+        "normalized_parcel_id": "0001A07",
+        "address_key": "123 MAIN ST|CO"
+      }
+    },
+    {
+      "name": "address fallback",
+      "record": {
+        "county_fips": "08031",
+        "parcel_id": "",
+        "address": "123 Main St., Apt #4",
+        "state": "co"
+      },
+      "expected": {
+        "property_id": "08031-ADDR-93eddaaae8aa7e995bcd",
+        "normalized_parcel_id": "",
+        "address_key": "123 MAIN ST APT 4|CO"
+      }
+    },
+    {
+      "name": "equivalent punctuation fallback",
+      "record": {
+        "county_fips": "08031",
+        "parcel_id": "--",
+        "address": " 123 MAIN ST APT 4 ",
+        "state": "CO"
+      },
+      "expected": {
+        "property_id": "08031-ADDR-93eddaaae8aa7e995bcd",
+        "normalized_parcel_id": "",
+        "address_key": "123 MAIN ST APT 4|CO"
+      }
+    },
+    {
+      "name": "different state fallback",
+      "record": {
+        "county_fips": "08031",
+        "parcel_id": null,
+        "address": "123 Main St., Apt #4",
+        "state": "TX"
+      },
+      "expected": {
+        "property_id": "08031-ADDR-3b6a33b8ff331f586827",
+        "normalized_parcel_id": "",
+        "address_key": "123 MAIN ST APT 4|TX"
+      }
+    },
+    {
+      "name": "all zero parcel preserved",
+      "record": {
+        "county_fips": "08031",
+        "parcel_id": "00000"
+      },
+      "expected": {
+        "property_id": "08031-00000",
+        "normalized_parcel_id": "00000",
+        "address_key": ""
+      }
+    },
+    {
+      "name": "Unicode uppercase expansions",
+      "record": {
+        "county_fips": "08031",
+        "parcel_id": "00-ß-ı",
+        "address": "Café / Straße",
+        "state": "CO"
+      },
+      "expected": {
+        "property_id": "08031-00SSI",
+        "normalized_parcel_id": "00SSI",
+        "address_key": "CAF STRASSE|CO"
+      }
+    },
+    {
+      "name": "null optional fields",
+      "record": {
+        "county_fips": "08031",
+        "parcel_id": "000001",
+        "address": null,
+        "state": null
+      },
+      "expected": {
+        "property_id": "08031-000001",
+        "normalized_parcel_id": "000001",
+        "address_key": ""
+      }
+    },
+    {
+      "name": "unknown canonical fields ignored",
+      "record": {
+        "county_fips": "08031",
+        "parcel_id": "001",
+        "address": "12-A Main\nSt",
+        "state": "CO",
+        "assessed_value": 100000
+      },
+      "expected": {
+        "property_id": "08031-001",
+        "normalized_parcel_id": "001",
+        "address_key": "12 A MAIN ST|CO"
+      }
+    },
+    {
+      "name": "different unit remains distinct",
+      "record": {
+        "county_fips": "08031",
+        "parcel_id": "",
+        "address": "123 Main St Apt 5",
+        "state": "CO"
+      },
+      "expected": {
+        "property_id": "08031-ADDR-216163edb34956abc0da",
+        "normalized_parcel_id": "",
+        "address_key": "123 MAIN ST APT 5|CO"
+      }
+    },
+    {
+      "name": "county scoped address fallback",
+      "record": {
+        "county_fips": "08059",
+        "parcel_id": "",
+        "address": "123 Main St Apt 4",
+        "state": "CO"
+      },
+      "expected": {
+        "property_id": "08059-ADDR-93eddaaae8aa7e995bcd",
+        "normalized_parcel_id": "",
+        "address_key": "123 MAIN ST APT 4|CO"
+      }
+    },
+    {
+      "name": "missing parcel address fallback",
+      "record": {
+        "county_fips": "48029",
+        "address": "42 Oak Avenue",
+        "state": "TX"
+      },
+      "expected": {
+        "property_id": "48029-ADDR-b9e99b7ea391997bb431",
+        "normalized_parcel_id": "",
+        "address_key": "42 OAK AVENUE|TX"
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "name": "missing county",
+      "record": {
+        "parcel_id": "001"
+      }
+    },
+    {
+      "name": "numeric county forbidden",
+      "record": {
+        "county_fips": 8031,
+        "parcel_id": "001"
+      }
+    },
+    {
+      "name": "short county",
+      "record": {
+        "county_fips": "8031",
+        "parcel_id": "001"
+      }
+    },
+    {
+      "name": "long county",
+      "record": {
+        "county_fips": "080310",
+        "parcel_id": "001"
+      }
+    },
+    {
+      "name": "alphabetic county",
+      "record": {
+        "county_fips": "08A31",
+        "parcel_id": "001"
+      }
+    },
+    {
+      "name": "Unicode county digits forbidden",
+      "record": {
+        "county_fips": "٠٨٠٣١",
+        "parcel_id": "001"
+      }
+    },
+    {
+      "name": "empty address fallback",
+      "record": {
+        "county_fips": "08031",
+        "parcel_id": "",
+        "address": "---",
+        "state": "CO"
+      }
+    },
+    {
+      "name": "missing fallback state",
+      "record": {
+        "county_fips": "08031",
+        "parcel_id": "",
+        "address": "123 Main"
+      }
+    },
+    {
+      "name": "invalid state",
+      "record": {
+        "county_fips": "08031",
+        "parcel_id": "123",
+        "state": "Colorado"
+      }
+    },
+    {
+      "name": "numeric parcel forbidden",
+      "record": {
+        "county_fips": "08031",
+        "parcel_id": 123
+      }
+    },
+    {
+      "name": "overlong parcel",
+      "record": {
+        "county_fips": "08031",
+        "parcel_id": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "name": "overlong address",
+      "record": {
+        "county_fips": "08031",
+        "parcel_id": "001",
+        "address": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "name": "overlong raw state",
+      "record": {
+        "county_fips": "08031",
+        "parcel_id": "001",
+        "state": "                               CO"
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+---
+title: "Development budget"
+kind: "operational_knowledge"
+owner: "101XVC"
+reviewed_utc: "2026-10-03"
+tags: ["real-estate", "operations"]
+source_ids: ["occ_cre"]
+evidence_scope: "Original analytical workflow with linked primary domain references"
+---
+
+# Development budget
+
+A development budget should reconcile land, site work, building costs, tenant work, consultants, permits, fees, interest, and reserves.
+
+## 101XVC workflow
+
+- Identify who bears each cost
+- Store estimate date and scope basis
+- Separate committed and conceptual costs
+- Reconcile total cost with loan-to-cost and equity requirements
+
+## Related notes
+
+[[Loan to cost]], [[Development feasibility]], [[Construction draws]]
+
+## Primary references
+
+- [Commercial Real Estate Lending, Comptroller's Handbook version 2.0](https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/files/commercial-real-estate-lending/pub-ch-commercial-real-estate.pdf)
+
+Reference scope: the links support the topic domain. The workflow is original 101XVC analysis, not a quotation, jurisdiction-wide legal conclusion, or agency endorsement. Check the current authoritative requirements for the actual transaction.

@@ -1,0 +1,30 @@
+---
+title: "IRR"
+kind: "operational_knowledge"
+owner: "101XVC"
+reviewed_utc: "2026-10-03"
+tags: ["real-estate", "valuation"]
+source_ids: ["occ_cre"]
+evidence_scope: "Original analytical workflow with linked primary domain references"
+---
+
+# IRR
+
+IRR is the discount rate at which net present value of a cash-flow sequence is zero. Dates and signs matter; unusual cash flows can create ambiguous results.
+
+## 101XVC workflow
+
+- Use actual dated cash flows for realized returns
+- Show the equity multiple alongside IRR
+- Check for multiple sign changes and solver failures
+- Keep nominal, real, levered, and unlevered cases distinct
+
+## Related notes
+
+[[NPV]], [[Equity multiple]], [[Levered cash flow]]
+
+## Primary references
+
+- [Commercial Real Estate Lending, Comptroller's Handbook version 2.0](https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/files/commercial-real-estate-lending/pub-ch-commercial-real-estate.pdf)
+
+Reference scope: the links support the topic domain. The workflow is original 101XVC analysis, not a quotation, jurisdiction-wide legal conclusion, or agency endorsement. Check the current authoritative requirements for the actual transaction.
