@@ -42,6 +42,7 @@ const delay = ms => new Promise(resolve=>setTimeout(resolve,ms));
     await page.locator('a[data-page=registry]').click();
     await page.locator('#registry-rows button').first().click();
     await page.locator('#property-drawer.open, #property-drawer.visible, #property-drawer:not(.hidden)').waitFor();
+    await page.locator('#drawer-title').waitFor();
     await page.screenshot({path:path.join(screenshotDir,'property-evidence.png'),fullPage:true});
     await page.locator('#drawer-close').click();
     await page.locator('a[data-page=brain]').click();
@@ -96,7 +97,12 @@ const delay = ms => new Promise(resolve=>setTimeout(resolve,ms));
     await page.locator('#brain-tab-models').click();
     await page.locator('#brain-model-train-form [name=kind]').selectOption('valuation');
     const candidate=await submit('#brain-model-train','/api/brain/models/train');
-    if(candidate.status!=='insufficient_data')throw Error('Empty observed ledger must abstain from valuation training');
+    // Insufficient support is preserved as an unpromotable candidate artifact.
+    if(candidate.status!=='candidate'||candidate.gate?.eligible!==false||candidate.support?.usable!==0)
+      throw Error('Empty observed ledger must preserve an unpromotable valuation candidate');
+    await page.locator('#brain-registry-models .registry-model').first().waitFor();
+    if(!await page.locator('#brain-promote-'+candidate.model_id).isDisabled())
+      throw Error('Insufficient-support candidate must not expose an enabled promotion control');
     // All views should keep labels and external evidence safe as DOM text.
     if(errors.length)throw Error(errors.join('; '));
     await page.setViewportSize({width:390,height:844});

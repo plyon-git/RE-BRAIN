@@ -532,7 +532,7 @@ for filename,data in [('manifest.json',manifest),('deals.json',DEALS),('sources.
     write('_data/'+filename,json.dumps(data,ensure_ascii=False,indent=2)+'\n')
 fields=['id','asset_name','seller','location','closing_date','closing_period','date_precision','transaction_type','interest_sold_pct','unit_count','disclosed_value_usd','disclosed_value_type','net_cash_proceeds_usd','cost_basis_usd','reported_gain_usd','measurement_type','gain_scope','realized_cash_profit_usd','realized_irr','evidence_status','source_url','source_locator','accessed_utc','limitations','note_path']
 with (ROOT/'_data/deals.csv').open('w',newline='',encoding='utf-8') as f:
-    w=csv.DictWriter(f,fieldnames=fields,extrasaction='ignore');w.writeheader();w.writerows(DEALS)
+    w=csv.DictWriter(f,fieldnames=fields,extrasaction='ignore',lineterminator='\n');w.writeheader();w.writerows(DEALS)
 write('.obsidian/app.json',json.dumps(dict(showLineNumber=True,strictLineBreaks=False,attachmentFolderPath='_attachments',newFileLocation='folder',newFileFolderPath='10-Templates'),indent=2)+'\n')
 write('.obsidian/graph.json',json.dumps(dict(collapseFilter=False,search='',showTags=True,showAttachments=False,hideUnresolved=False,showOrphans=True),indent=2)+'\n')
 print(json.dumps({k:manifest[k] for k in ['topic_count','template_count','deal_count','source_count','transaction_type_counts']},indent=2))
