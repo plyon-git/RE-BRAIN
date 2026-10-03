@@ -4,6 +4,7 @@ import hmac
 import ipaddress
 import json
 import os
+import urllib.parse
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from engine import KnowledgeIndex, OpportunityModel, extract
@@ -39,6 +40,14 @@ class Handler(BaseHTTPRequestHandler):
         key = os.getenv('BRAIN_API_KEY','')
         if key:
             return hmac.compare_digest(self.headers.get('Authorization',''), 'Bearer '+key)
+        allowed_hosts={'localhost','127.0.0.1','::1'}
+        if urllib.parse.urlsplit('//'+self.headers.get('Host','')).hostname not in allowed_hosts:
+            return False
+        origin=self.headers.get('Origin')
+        if origin:
+            parsed=urllib.parse.urlsplit(origin)
+            if parsed.hostname not in allowed_hosts or parsed.netloc!=self.headers.get('Host',''):
+                return False
         try:
             return ipaddress.ip_address(self.client_address[0]).is_loopback
         except ValueError:

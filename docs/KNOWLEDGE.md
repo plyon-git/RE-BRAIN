@@ -6,13 +6,15 @@ The program includes a local Obsidian vault at `knowledge/obsidian`. Open that d
 
 | Material | Count | Scope |
 |---|---:|---|
-| Original operating knowledge notes | 158 | Acquisition, underwriting, financing, diligence, construction, asset management, markets, tax/legal review, data, classical NLP and ML |
+| Original operating knowledge notes | 182 | Acquisition, underwriting, financing, diligence, construction, asset management, markets, tax/legal review, data, classical NLP and ML |
 | Reusable operating templates | 10 | Intake, investment committee, deal evidence, rehab, closing reconciliation, source registry, records requests, model cards, investor reporting, acquisition experiments |
 | Completed transaction evidence records | 53 | Selected issuer-reported completed transactions with positive accounting disposition gains |
-| Primary reference records | 66 | Issuer SEC disclosures, regulators, federal agencies, municipal sources, standards, and official technical documentation |
-| Markdown files, including maps and indexes | 234 | Linked, searchable notes with source information |
+| Primary reference records | 70 | Issuer SEC disclosures, regulators, federal agencies, municipal sources, standards, and official technical documentation |
+| Markdown files, including maps and indexes | 260 | Linked, searchable notes with source information |
 
 The vault is a curated foundation, not literally all real estate knowledge. It does not establish that every positive-gain case produced positive investor cash profit. It does not contain guessed purchase prices, invented net returns, or copied publisher archives.
+
+The additional `11-Underwriting-Intelligence` workstream has 24 original notes covering all twelve components in the supplied XVCbrain specification. Its explicit `00-Start/XVCbrain 12-component map.md` connects the requirements to operational knowledge, including competing outcomes, right censoring, cash receipt lags, counterfactual acceptance, liquidity, capacity, value of information, marginal spending, demand deterioration, calibration, temporal evaluation, reconciliation, and model promotion. This is knowledge coverage rather than a claim that each mature feature is implemented or statistically validated. The exact supplied specification is preserved in `docs/UNDERWRITING-REQUIREMENTS.md`; implementation boundaries are recorded in `docs/UNDERWRITING.md`.
 
 ## Completed deal evidence
 

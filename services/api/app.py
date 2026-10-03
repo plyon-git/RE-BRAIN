@@ -180,6 +180,40 @@ class IntelligenceGateway:
             raise ValueError("unsupported intelligence endpoint")
 
 
+class UnderwritingGateway:
+    """Lazily wire permanent transactions, measured models and report engine."""
+    def __init__(self,store):
+        self.store=store
+        self.ledger=None
+        self.registry=None
+        self.engine=None
+        self.documents=None
+
+    def initialize(self):
+        with self.store.lock:
+            if self.engine is None:
+                import sys
+                root=Path(__file__).resolve().parents[2]
+                if str(root) not in sys.path:sys.path.insert(0,str(root))
+                from services.underwriting.ledger import TransactionLedger
+                from services.underwriting.registry import ModelRegistry
+                from services.underwriting.engine import UnderwritingEngine
+                self.ledger=TransactionLedger(self.store.db,self.store.lock)
+                self.registry=ModelRegistry(os.environ.get('BRAIN_REGISTRY',str(root/'runtime'/'underwriting-models')))
+                self.engine=UnderwritingEngine(self.ledger,self.registry)
+        return self
+
+    def document_store(self):
+        with self.store.lock:
+            if self.documents is None:
+                import sys
+                root=Path(__file__).resolve().parents[2]
+                if str(root) not in sys.path:sys.path.insert(0,str(root))
+                from services.api.documents import DocumentStore
+                self.documents=DocumentStore(os.environ.get('BRAIN_DOCUMENTS',str(Path(self.store.path).parent/'documents')))
+        return self.documents
+
+
 class BrainStore:
     def __init__(self, path):
         self.path = str(path)
@@ -195,6 +229,10 @@ class BrainStore:
           CREATE TABLE IF NOT EXISTS properties(id TEXT PRIMARY KEY,parcel_id TEXT,address TEXT NOT NULL,state TEXT NOT NULL,county_fips TEXT NOT NULL,data TEXT NOT NULL,updated_at TEXT NOT NULL,synthetic INTEGER NOT NULL);
           CREATE TABLE IF NOT EXISTS evidence(id INTEGER PRIMARY KEY AUTOINCREMENT,source_id TEXT NOT NULL REFERENCES sources(id),source_record_id TEXT NOT NULL,property_id TEXT NOT NULL REFERENCES properties(id),category TEXT NOT NULL,observed_at TEXT NOT NULL,record TEXT NOT NULL,UNIQUE(source_id,source_record_id));
           CREATE INDEX IF NOT EXISTS evidence_property_idx ON evidence(property_id);
+          CREATE TABLE IF NOT EXISTS evidence_history(id TEXT PRIMARY KEY,source_id TEXT NOT NULL REFERENCES sources(id),source_record_id TEXT NOT NULL,property_id TEXT NOT NULL REFERENCES properties(id),observed_at TEXT NOT NULL,available_at TEXT NOT NULL,recorded_at TEXT NOT NULL,record TEXT NOT NULL);
+          CREATE INDEX IF NOT EXISTS evidence_history_property_idx ON evidence_history(property_id,recorded_at);
+          CREATE TRIGGER IF NOT EXISTS evidence_history_no_update BEFORE UPDATE ON evidence_history BEGIN SELECT RAISE(ABORT,'Source evidence snapshots are immutable'); END;
+          CREATE TRIGGER IF NOT EXISTS evidence_history_no_delete BEFORE DELETE ON evidence_history BEGIN SELECT RAISE(ABORT,'Source evidence snapshots are permanent'); END;
           CREATE INDEX IF NOT EXISTS property_state_idx ON properties(state);
           CREATE INDEX IF NOT EXISTS property_county_idx ON properties(county_fips);
           CREATE INDEX IF NOT EXISTS property_updated_idx ON properties(updated_at DESC,id);
@@ -334,11 +372,23 @@ class BrainStore:
             record["observed_at"] = observed.astimezone(timezone.utc).isoformat(timespec="seconds")
         except (ValueError, TypeError):
             raise ValueError("observed_at must be an ISO 8601 datetime or date") from None
+        recorded = datetime.now(timezone.utc).isoformat(timespec='microseconds')
+        try:
+            available = datetime.fromisoformat(str(record.get('available_at') or recorded).replace('Z','+00:00'))
+            if available.tzinfo is None:available=available.replace(tzinfo=timezone.utc)
+            available=available.astimezone(timezone.utc)
+        except (ValueError,TypeError):
+            raise ValueError('available_at must be an ISO 8601 datetime or date') from None
+        if available.timestamp()>time.time()+300:raise ValueError('available_at cannot be in the future')
+        record['availability_basis']='provided_by_source' if data.get('available_at') else 'first_ingestion_receipt'
+        record['available_at']=available.isoformat(timespec='microseconds')
+        record['recorded_at']=recorded
         source = self.db.execute("SELECT * FROM sources WHERE id=?", (record["source_id"],)).fetchone()
         if not source:
             raise ValueError("source_id is not registered; configure it through /api/sources first")
         if source["category"] != record["category"] or (source["state"] and source["state"] != record["state"]) or (source["county_fips"] and source["county_fips"] != record["county_fips"]):
             raise ValueError("record category or geographic scope differs from registered source")
+        record['source_snapshot']={key:source[key] for key in ('id','name','category','state','county_fips','url','adapter','status','created_at')}
         for field in NUMERIC_FIELDS:
             value = record["attributes"].get(field)
             if value is not None:
@@ -378,6 +428,25 @@ class BrainStore:
                     result["errors"].append({"index":_, "error":"source record identity cannot change parcels; use a new source_record_id"})
                     continue
                 self.db.execute("INSERT OR IGNORE INTO properties VALUES(?,?,?,?,?,?,?,?)", (property_id, identity["normalized_parcel_id"], record["address"], record["state"], record["county_fips"], "{}", now(), int(record["synthetic"])))
+                signature={k:v for k,v in record.items() if k not in {'recorded_at','available_at','evidence_version_id'}}
+                if record['availability_basis']=='provided_by_source':signature['available_at']=record['available_at']
+                version_id='evidence-'+hashlib.sha256(json.dumps(signature,sort_keys=True,separators=(',',':'),ensure_ascii=False,allow_nan=False).encode()).hexdigest()
+                record['evidence_version_id']=version_id
+                historic=self.db.execute('SELECT record FROM evidence_history WHERE id=?',(version_id,)).fetchone()
+                if historic:
+                    record=json.loads(historic['record'])
+                else:
+                    self.db.execute('INSERT INTO evidence_history VALUES(?,?,?,?,?,?,?,?)',(version_id,record['source_id'],record['source_record_id'],property_id,record['observed_at'],record['available_at'],record['recorded_at'],compact(record)))
+                current=self.db.execute('SELECT record FROM evidence WHERE source_id=? AND source_record_id=?',(record['source_id'],record['source_record_id'])).fetchone()
+                if current:
+                    prior=json.loads(current['record'])
+                    # A repeated old snapshot is retained without rewinding a newer feed observation.
+                    prior_key=(prior.get('observed_at',''),prior.get('recorded_at',''))
+                    next_key=(record['observed_at'],record['recorded_at'])
+                    if next_key<prior_key:
+                        result['accepted']+=1
+                        affected.add(property_id)
+                        continue
                 self.db.execute("INSERT INTO evidence(source_id,source_record_id,property_id,category,observed_at,record) VALUES(?,?,?,?,?,?) ON CONFLICT(source_id,source_record_id) DO UPDATE SET category=excluded.category,observed_at=excluded.observed_at,record=excluded.record", (record["source_id"],record["source_record_id"],property_id,record["category"],record["observed_at"],compact(record)))
                 affected.add(property_id)
                 result["accepted"] += 1
@@ -389,6 +458,9 @@ class BrainStore:
 
     def evidence(self, property_id):
         return [dict(json.loads(row["record"]), evidence_id=row["id"], property_id=row["property_id"]) for row in self.db.execute("SELECT * FROM evidence WHERE property_id=? ORDER BY observed_at DESC,id DESC", (property_id,))]
+
+    def evidence_history(self,property_id):
+        return [dict(json.loads(row['record']),property_id=row['property_id']) for row in self.db.execute('SELECT * FROM evidence_history WHERE property_id=? ORDER BY recorded_at,id',(property_id,))]
 
     def rebuild(self, property_id):
         observations = self.evidence(property_id)
@@ -409,6 +481,7 @@ class BrainStore:
             observation, value = candidates[0]
             data[field] = value
             provenance[field] = {"source_id":observation["source_id"], "source_record_id":observation["source_record_id"], "category":observation["category"], "observed_at":observation["observed_at"], "evidence_id":observation["evidence_id"], "selection_rule":"category authority, then latest observation, then stable source identity"}
+            provenance[field].update(available_at=observation.get('available_at'),recorded_at=observation.get('recorded_at'),evidence_version_id=observation.get('evidence_version_id'),availability_basis=observation.get('availability_basis','unknown'))
             distinct = {compact(candidate) for _,candidate in candidates}
             if len(distinct) > 1:
                 conflicts.append({"field":field,"selected":value,"selected_source_id":observation["source_id"],"values":[{"value":candidate,"source_id":obs["source_id"],"source_record_id":obs["source_record_id"],"observed_at":obs["observed_at"]} for obs,candidate in candidates]})
@@ -469,7 +542,7 @@ class BrainStore:
             comps.sort(key=lambda item: abs((item.get("estimated_value") or item.get("assessed_value") or 0)-target_value))
             # These are candidates, not verified comparable sale selections.
             comps = [{"id":item["id"],"address":item["address"],"estimated_value":item.get("estimated_value"),"assessed_value":item.get("assessed_value"),"synthetic":item["synthetic"],"status":"candidate; verify sale date, condition and comparability","field_provenance":item.get("field_provenance",{})} for item in comps[:5]]
-            return {"property":prop,"evidence":evidence,"conflicts":prop["conflicts"],"field_provenance":prop["field_provenance"],"comps":comps,"underwriting":self.default_underwriting(prop)}
+            return {"property":prop,"evidence":evidence,"evidence_history":self.evidence_history(identifier),"conflicts":prop["conflicts"],"field_provenance":prop["field_provenance"],"comps":comps,"underwriting":self.default_underwriting(prop)}
 
     def stats(self):
         with self.lock:
@@ -613,6 +686,7 @@ def handler_for(store, web_root=None):
     root = Path(web_root or Path(__file__).resolve().parents[2]/"web").resolve()
     key = os.environ.get("BRAIN_API_KEY", "")
     intelligence = IntelligenceGateway()
+    brain = UnderwritingGateway(store)
 
     class Handler(BaseHTTPRequestHandler):
         server_version = "101XVC-BRAIN/1.0"
@@ -636,6 +710,14 @@ def handler_for(store, web_root=None):
                 import hmac
                 return hmac.compare_digest(self.headers.get("Authorization", ""), "Bearer "+key)
             # No-key development mode is local-only, even if explicitly bound widely.
+            allowed_hosts = {"localhost", "127.0.0.1", "::1"}
+            if urllib.parse.urlsplit("//"+self.headers.get("Host", "")).hostname not in allowed_hosts:
+                return False
+            origin = self.headers.get("Origin")
+            if origin:
+                parsed_origin = urllib.parse.urlsplit(origin)
+                if parsed_origin.hostname not in allowed_hosts or parsed_origin.netloc != self.headers.get("Host", ""):
+                    return False
             try:
                 return ipaddress.ip_address(self.client_address[0]).is_loopback
             except ValueError:
@@ -693,6 +775,22 @@ def handler_for(store, web_root=None):
                 elif path == "/api/jobs": self.send_json(store.jobs())
                 elif path == "/api/knowledge": self.send_json(intelligence.request("/search",{"query":query.get("q",""),"limit":int(query.get("limit",10))}))
                 elif path == "/api/models": self.send_json(intelligence.request("/models"))
+                elif path == "/api/documents": self.send_json(brain.document_store().list(query.get("property_id")))
+                elif path.startswith("/api/documents/"):
+                    document=brain.document_store().get(path[len("/api/documents/"):])
+                    self.send_json(document or {"error":"document not found"},200 if document else 404)
+                elif path == "/api/brain/episodes": self.send_json(brain.initialize().ledger.episodes(query.get("property_id")))
+                elif path.startswith("/api/brain/episodes/"):
+                    detail=brain.initialize().ledger.get_episode(path[len("/api/brain/episodes/"):])
+                    self.send_json(detail or {"error":"episode not found"},200 if detail else 404)
+                elif path == "/api/brain/rules": self.send_json(brain.initialize().ledger.rules(query))
+                elif path == "/api/brain/portfolio": self.send_json(brain.initialize().engine.portfolio())
+                elif path == "/api/brain/queue": self.send_json(brain.initialize().engine.queue())
+                elif path == "/api/brain/models": self.send_json(brain.initialize().registry.status())
+                elif path.startswith("/api/brain/report/"):
+                    detail=store.detail(path[len("/api/brain/report/"):])
+                    if detail:self.send_json(brain.initialize().engine.report(detail,query.get("episode_id"),{}))
+                    else:self.send_json({"error":"property not found"},404)
                 elif path == "/api/export":
                     raw = store.export_csv().encode()
                     self.send_response(200)
@@ -712,6 +810,34 @@ def handler_for(store, web_root=None):
                 elif path == "/api/predict": self.send_json(intelligence.request("/predict",data))
                 elif path == "/api/train": self.send_json(intelligence.request("/train",data))
                 elif path == "/api/extract": self.send_json(intelligence.request("/extract",data))
+                elif path == "/api/documents":
+                    if data.get('property_id') and not store.detail(data['property_id']):raise ValueError('property_id does not exist')
+                    if data.get('episode_id'):
+                        episode=brain.initialize().ledger.get_episode(data['episode_id'])
+                        if not episode:raise ValueError('episode_id does not exist')
+                        linked_property=episode['episode']['property_id']
+                        if data.get('property_id') and data['property_id']!=linked_property:raise ValueError('Document property link differs from episode property')
+                        data['property_id']=linked_property
+                    self.send_json(brain.document_store().put(data),201)
+                elif path == "/api/brain/episodes": self.send_json({"episode":brain.initialize().ledger.add_episode(data.get('episode',data))},201)
+                elif path.startswith("/api/brain/episodes/") and path.endswith("/events"):
+                    episode_id=path[len('/api/brain/episodes/'):-len('/events')]
+                    self.send_json({"event":brain.initialize().ledger.add_event(episode_id,data)},201)
+                elif path.startswith("/api/brain/episodes/") and path.endswith("/decisions"):
+                    episode_id=path[len('/api/brain/episodes/'):-len('/decisions')]
+                    self.send_json({"decision":brain.initialize().ledger.record_decision(episode_id,data)},201)
+                elif path == "/api/brain/rules": self.send_json({"rule":brain.initialize().ledger.add_rule(data.get('rule',data))},201)
+                elif path == "/api/brain/models/train":
+                    service=brain.initialize()
+                    rows=data.get('rows')
+                    if rows is None:rows=service.ledger.model_rows(data.get('kind'),data.get('as_of'))
+                    self.send_json(service.registry.train(data.get('kind'),rows,synthetic=data.get('synthetic',False)))
+                elif path == "/api/brain/models/promote": self.send_json(brain.initialize().registry.promote(data.get('model_id')))
+                elif path == "/api/brain/models/rollback": self.send_json(brain.initialize().registry.rollback(data.get('kind'),data.get('model_id')))
+                elif path.startswith("/api/brain/report/"):
+                    detail=store.detail(path[len("/api/brain/report/"):])
+                    if detail:self.send_json(brain.initialize().engine.report(detail,data.get('episode_id',query.get('episode_id')),data.get('scenario',data)))
+                    else:self.send_json({"error":"property not found"},404)
                 elif path == "/api/underwrite":
                     if data.get("property_id"):
                         detail = store.detail(data["property_id"])

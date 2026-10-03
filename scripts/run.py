@@ -16,7 +16,9 @@ def main():
     parser.add_argument('--port',type=int,default=8080)
     parser.add_argument('--no-reference-model',action='store_true')
     args=parser.parse_args()
-    if args.host not in ('127.0.0.1','localhost','::1') and not os.environ.get('BRAIN_API_KEY'):
+    if ':' in args.host:
+        parser.error('This launcher supports IPv4 hosts; use 127.0.0.1 for local access')
+    if args.host not in ('127.0.0.1','localhost') and not os.environ.get('BRAIN_API_KEY'):
         parser.error('Set BRAIN_API_KEY before binding the API outside loopback')
     env=os.environ.copy()
     env['BRAIN_HOST']=args.host

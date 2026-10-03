@@ -1,4 +1,5 @@
 /** 101XVC BRAIN browser client. Dependency-free; no records leave this instance. */
+import { loadBrain } from './brain.js';
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const state = { page: 'overview', stats: {}, sources: [], watchlist: [], registry: [], scout: [], offset: 0, limit: 20, total: 0, categories: new Set(), currentProperty: null, importRecords: [], importColumns: [], editingSource: null };
@@ -50,7 +51,7 @@ function date(value) { if (!value) return 'Not recorded'; const parsed = new Dat
 function textValue(value, fallback = 'Unavailable') { if (value === null || value === undefined || value === '') return fallback; return typeof value === 'object' ? JSON.stringify(value) : String(value); }
 function items(response) { return Array.isArray(response) ? response : response?.items || []; }
 function scoreValue(value) { return Math.max(0, Math.min(100, number(value))); }
-function score(value) { const val = scoreValue(value); return element('div', { class:'score-display' }, element('span',{class:'score-value',text:value == null ? '—' : val.toFixed(0)}),element('span',{class:'score-meter'},element('span',{style:`width:${val}%` }))); }
+function score(value) { const val = scoreValue(value); return element('div', { class:'score-display' }, element('span',{class:'score-value',text:value == null ? 'N/A' : val.toFixed(0)}),element('span',{class:'score-meter'},element('span',{style:`width:${val}%` }))); }
 function synthetic(record) { return record?.synthetic === true || record?.synthetic === 1 || record?.synthetic === '1'; }
 function tag(label, type = '') { return element('span',{class:`tag ${type}`,text:label}); }
 function recordTag(record) { return synthetic(record) ? tag('SYNTHETIC', '') : tag('IMPORTED','blue'); }
@@ -90,13 +91,13 @@ function safeLink(url, label, attrs = {}) { try { const parsed = new URL(url,loc
 
 function navigate() {
   const requested = location.hash.slice(1) || 'overview';
-  const page = ['overview','registry','scout','sources','watchlist','knowledge','operations'].includes(requested) ? requested : 'overview';
+  const page = ['overview','registry','scout','sources','watchlist','knowledge','operations','brain'].includes(requested) ? requested : 'overview';
   state.page = page;
   $$('.page').forEach(node => node.classList.toggle('active',node.id === `page-${page}`));
   $$('.nav-link').forEach(node => node.classList.toggle('active',node.dataset.page === page));
-  $('#breadcrumb-page').textContent = {registry:'PROPERTY REGISTRY',sources:'SOURCE NETWORK',scout:'DEAL SCOUT',watchlist:'WATCHLIST',knowledge:'KNOWLEDGE VAULT',operations:'OPERATIONS',overview:'OVERVIEW'}[page];
+  $('#breadcrumb-page').textContent = {registry:'PROPERTY REGISTRY',sources:'SOURCE NETWORK',scout:'DEAL SCOUT',watchlist:'WATCHLIST',knowledge:'KNOWLEDGE VAULT',operations:'OPERATIONS',overview:'OVERVIEW',brain:'UNDERWRITING INTELLIGENCE'}[page];
   $('.sidebar').classList.remove('mobile-open');
-  const loaders = { overview: loadOverview, registry: loadRegistry, scout: loadScout, sources: loadSources, watchlist: loadWatchlist, knowledge: loadKnowledge, operations: loadOperations };
+  const loaders = { overview: loadOverview, registry: loadRegistry, scout: loadScout, sources: loadSources, watchlist: loadWatchlist, knowledge: loadKnowledge, operations: loadOperations, brain:loadBrain };
   loaders[page]().catch(apiError);
 }
 async function loadHealth() {
@@ -167,7 +168,7 @@ async function loadOverview() {
   const rows = items(opportunities).slice(0,5);
   if (rows.some(synthetic)) $('#synthetic-indicator').classList.remove('hidden');
   if (!rows.length) tableEmpty('#overview-opportunities','Your next opportunity starts here','Import a property dataset or load labeled synthetic data to explore the workspace.',6);
-  else replace('#overview-opportunities',rows.map(property=>element('tr',{},element('td',{},propertyLabel(property)),element('td',{text:property.state || '—'}),element('td',{text:money(property.estimated_value)}),element('td',{},score(property.score ?? property.opportunity_score)),element('td',{},recordTag(property)),element('td',{},element('button',{class:'row-open','aria-label':`Open ${property.address || 'property'}`,onclick:()=>openProperty(property.id)},'↗')))));
+  else replace('#overview-opportunities',rows.map(property=>element('tr',{},element('td',{},propertyLabel(property)),element('td',{text:property.state || 'N/A'}),element('td',{text:money(property.estimated_value)}),element('td',{},score(property.score ?? property.opportunity_score)),element('td',{},recordTag(property)),element('td',{},element('button',{class:'row-open','aria-label':`Open ${property.address || 'property'}`,onclick:()=>openProperty(property.id)},'↗')))));
 }
 function renderFusion() {
   if (!state.categories.size) categories.forEach(category=>state.categories.add(category.key));
@@ -209,7 +210,7 @@ async function loadRegistry() {
   if (!state.registry.length) return tableEmpty('#registry-rows','No matching properties','Try a broader search or import records from Source network.',7);
   replace('#registry-rows',state.registry.map(property=>{
     const risk = scoreValue(property.risk_score);
-    return element('tr',{},element('td',{},propertyLabel(property)),element('td',{text:property.owner || 'Not reported'}),element('td',{text:property.state || '—'}),element('td',{text:money(property.estimated_value)}),element('td',{},element('span',{class:`risk ${risk<35 ? 'low' : risk<65 ? 'medium' : 'high'}`,text:property.risk_score == null ? '—' : `${risk.toFixed(0)} / 100`})),element('td',{},score(property.score)),element('td',{},element('button',{class:'row-open','aria-label':`Open ${property.address || 'property'}`,onclick:()=>openProperty(property.id)},'↗')));
+    return element('tr',{},element('td',{},propertyLabel(property)),element('td',{text:property.owner || 'Not reported'}),element('td',{text:property.state || 'N/A'}),element('td',{text:money(property.estimated_value)}),element('td',{},element('span',{class:`risk ${risk<35 ? 'low' : risk<65 ? 'medium' : 'high'}`,text:property.risk_score == null ? 'N/A' : `${risk.toFixed(0)} / 100`})),element('td',{},score(property.score)),element('td',{},element('button',{class:'row-open','aria-label':`Open ${property.address || 'property'}`,onclick:()=>openProperty(property.id)},'↗')));
   }));
 }
 async function loadScout() {
@@ -399,7 +400,7 @@ $('#mobile-menu').addEventListener('click',()=>$('.sidebar').classList.toggle('m
 $('#drawer-close').addEventListener('click',closeDrawer);$('#drawer-backdrop').addEventListener('click',closeDrawer);
 document.addEventListener('keydown',event=>{
   if(event.key==='Escape') {closeDrawer();$('.sidebar').classList.remove('mobile-open');}
-  if(event.altKey && !event.ctrlKey && /^[1-7]$/.test(event.key)) {event.preventDefault();location.hash=['overview','registry','scout','sources','watchlist','knowledge','operations'][number(event.key)-1];}
+  if(event.altKey && !event.ctrlKey && /^[1-8]$/.test(event.key)) {event.preventDefault();location.hash=['overview','registry','scout','sources','watchlist','knowledge','operations','brain'][number(event.key)-1];}
   if(event.key==='Tab' && !$('#property-drawer').classList.contains('hidden')) {
     const focusable=$$('button,a[href],input,select,summary,[tabindex="0"]',$('#property-drawer')).filter(node=>!node.disabled);
     const first=focusable[0], last=focusable.at(-1);

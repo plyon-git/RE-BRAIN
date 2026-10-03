@@ -22,6 +22,14 @@ for p in files:
 for n in manifest['notes']:
     if not (root/n['path']).is_file(): errors.append('Missing note: '+n['path'])
     if not set(n['source_ids']) <= set(sources): errors.append('Unknown note source: '+n['id'])
+components = manifest.get('underwriting_components', [])
+if [c.get('number') for c in components] != list(range(1, 13)):
+    errors.append('Underwriting requirements must preserve components 1 through 12')
+for component in components:
+    if not (root/component['note_path']).is_file():
+        errors.append('Missing underwriting component note: '+component['note_path'])
+if not (root/manifest.get('underwriting_requirements_map', 'missing-requirements-map')).is_file():
+    errors.append('Missing twelve-component requirements map')
 seen=set()
 for d in deals:
     if d['id'] in seen: errors.append('Duplicate deal ID: '+d['id'])
@@ -44,9 +52,11 @@ for d in deals:
     if d['source_ids']==['slg2021jv'] and d['disclosed_value_type']!='gross_whole_asset_valuation':
         errors.append('Whole-asset valuation mislabeled: '+d['id'])
 if manifest['topic_count']!=len([n for n in manifest['notes'] if n['kind']=='operational_knowledge']):errors.append('Topic count mismatch')
+if manifest['template_count']!=len([n for n in manifest['notes'] if n['kind']=='template']):errors.append('Template count mismatch')
+if manifest['source_count']!=len(sources):errors.append('Source count mismatch')
 if manifest['deal_count']!=len(deals): errors.append('Deal count mismatch')
 if len(seen)!=53: errors.append('Expected curated evidence records changed; review source selection')
 if errors:
     print('\n'.join(errors))
     raise SystemExit(1)
-print(json.dumps({'status':'passed','markdown_files':len(files),'topics':manifest['topic_count'],'templates':manifest['template_count'],'transaction_records':len(deals),'primary_sources':len(sources),'unresolved_wikilinks':0,'unsupported_cash_profit_or_irr':0},indent=2))
+print(json.dumps({'status':'passed','markdown_files':len(files),'topics':manifest['topic_count'],'templates':manifest['template_count'],'transaction_records':len(deals),'primary_sources':len(sources),'underwriting_components':len(components),'unresolved_wikilinks':0,'unsupported_cash_profit_or_irr':0},indent=2))

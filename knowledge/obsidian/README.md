@@ -2,7 +2,7 @@
 
 Open this directory as an Obsidian vault and start at `00-Start/101XVC BRAIN Knowledge Home.md`.
 
-This version contains 158 original topic notes, 10 templates, 53 completed-transaction records, and 66 primary-reference links. It is a curated starting corpus, not literally all real estate knowledge.
+This version contains 182 original topic notes, 10 templates, 53 completed-transaction records, and 70 primary-reference links. It is a curated starting corpus, not literally all real estate knowledge.
 
 `_data/manifest.json` describes all topic and deal notes. `_data/deals.json` and `_data/deals.csv` contain structured case facts. `_data/sources.json` preserves source URLs, locators, access dates, scope, and redistribution notes. `reported_gain_usd` is issuer-reported accounting gain, never invented cash profit. `cost_basis_usd`, `realized_cash_profit_usd`, and `realized_irr` are null when unsupported. `disclosed_value_type` prevents a whole-asset valuation from being read as seller proceeds.
 

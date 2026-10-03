@@ -68,6 +68,17 @@ class BrainStoreTest(unittest.TestCase):
         self.assertEqual(self.store.detail("48439-000012")["property"]["owner"],"Bob")
         self.assertEqual(self.store.stats()["evidence"],2)
 
+    def test_source_versions_preserve_receipt_times_and_do_not_rewind_current_facts(self):
+        old=self.record(attributes={'owner':'Alice','assessed_value':200000})
+        self.store.ingest([old]);original=self.store.detail('48439-000012')['evidence'][0]
+        newer=self.record(observed_at='2026-09-03T12:00:00Z',attributes={'owner':'Bob','assessed_value':210000})
+        self.store.ingest([newer,old])
+        detail=self.store.detail('48439-000012')
+        self.assertEqual(detail['property']['owner'],'Bob')
+        self.assertEqual(len(detail['evidence_history']),2)
+        self.assertEqual(detail['evidence_history'][0]['recorded_at'],original['recorded_at'])
+        self.assertEqual(detail['field_provenance']['owner']['availability_basis'],'first_ingestion_receipt')
+
     def test_validation_rejects_unsafe_or_identity_losing_fields(self):
         for changes in ({"parcel_id":12},{"state":"ZZ"},{"county_fips":"439"},{"source_id":"unknown"},{"category":"tax"},{"observed_at":"tomorrow"},{"attributes":{"estimated_value":float("nan")}}):
             with self.subTest(changes=changes):

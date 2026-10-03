@@ -63,6 +63,10 @@ Each source was located through primary issuer, regulator, standards, or officia
 - **sec_access**: [SEC Webmaster Frequently Asked Questions](https://www.sec.gov/about/webmaster-frequently-asked-questions) - SEC.  Accessed 2026-10-03 UTC.
 - **energy**: [ENERGY STAR Portfolio Manager Benchmarking](https://www.energystar.gov/buildings/benchmark?testEnv=false) - EPA ENERGY STAR.  Accessed 2026-10-03 UTC.
 - **energy_sample**: [Portfolio Manager Data Explorer](https://www.energystar.gov/buildings/resources-topic/portfolio-manager-data-explorer) - EPA ENERGY STAR.  Accessed 2026-10-03 UTC.
+- **survival_competing**: [Analysis of Competing Risks](https://scikit-survival.readthedocs.io/en/stable/user_guide/competing-risks.html) - scikit-survival.  Accessed 2026-10-03 UTC.
+- **sklearn_calibration**: [Probability Calibration](https://scikit-learn.org/stable/modules/calibration.html) - scikit-learn.  Accessed 2026-10-03 UTC.
+- **mlflow_registry**: [ML Model Registry](https://mlflow.org/docs/latest/ml/model-registry/) - MLflow.  Accessed 2026-10-03 UTC.
+- **sklearn_leakage**: [Common Pitfalls and Recommended Practices](https://scikit-learn.org/stable/common_pitfalls.html) - scikit-learn.  Accessed 2026-10-03 UTC.
 - **avb2024q3**: [AvalonBay 2024 Q3 Form 10-Q](https://www.sec.gov/Archives/edgar/data/915912/000091591224000021/avb-20240930.htm) - AvalonBay Communities. Note 6, Real Estate Disposition Activities; table dollars in thousands Accessed 2026-10-03 UTC.
 - **avb2023q3**: [AvalonBay 2023 Q3 Form 10-Q](https://investors.avalonbay.com/sec-filings/all-sec-filings/content/0000915912-23-000018/avb-20230930.htm) - AvalonBay Communities. Note 6, Real Estate Disposition Activities; table dollars in thousands Accessed 2026-10-03 UTC.
 - **avb2022q3**: [AvalonBay 2022 Q3 Form 10-Q](https://www.sec.gov/Archives/edgar/data/915912/000091591222000020/avb-20220930.htm) - AvalonBay Communities. Note 6, Real Estate Disposition Activities; table dollars in thousands Accessed 2026-10-03 UTC.

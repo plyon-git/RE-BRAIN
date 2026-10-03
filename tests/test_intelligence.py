@@ -64,10 +64,16 @@ class IntelligenceTests(unittest.TestCase):
         service=importlib.util.module_from_spec(spec);spec.loader.exec_module(service)
         with patch.dict(os.environ,{'BRAIN_API_KEY':''}):
             remote=service.Handler.__new__(service.Handler)
-            remote.client_address=('192.0.2.1',55000);remote.headers={}
+            remote.client_address=('192.0.2.1',55000);remote.headers={'Host':'127.0.0.1:8083'}
             self.assertFalse(remote.authorized())
             remote.client_address=('127.0.0.1',55000)
             self.assertTrue(remote.authorized())
+            remote.headers['Origin']='https://foreign.example'
+            self.assertFalse(remote.authorized())
+            remote.headers['Origin']='http://127.0.0.1:8083'
+            self.assertTrue(remote.authorized())
+            remote.headers={'Host':'foreign.example'}
+            self.assertFalse(remote.authorized())
             server=ThreadingHTTPServer(('127.0.0.1',0),service.Handler)
             thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
             try:

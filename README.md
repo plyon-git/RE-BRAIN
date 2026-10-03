@@ -30,6 +30,8 @@ The browser interface, Python API, Go collectors, Rust parcel resolver and local
 - CSV/JSON, ArcGIS and Socrata collection; independent HTML-table scraper.
 - Watchlists, scored deal scout, explicit cost and fee-split underwriting, complete CSV export and operations history.
 - Locally trainable logistic regression, TF-IDF vault retrieval and rule-based document extraction.
+- XVCbrain Underwriting Intelligence: transaction episodes, offers and bids, settlements, cost and cash reconciliation, versioned rules, immutable decision snapshots, reviewed model promotion and rollback, competing-outcome closing forecasts, cash timing, portfolio scenarios and daily execution priorities.
+- Content-addressed local document storage with SHA256 integrity and property/episode links.
 - Original real estate knowledge notes and source-backed completed dispositions in an Obsidian vault.
 - More than **1 GiB** of deterministic synthetic property evidence for ingestion and fusion load testing, with shard checksums. This is benchmark data, not live county coverage.
 - Standalone full-program and Obsidian ZIPs in [Releases](https://github.com/plyon-git/RE-BRAIN/releases).
@@ -43,6 +45,8 @@ The bundled ML reference uses synthetic labels and is identified accordingly. Tr
 | [Hosting](docs/HOSTING.md) | Local operation, Docker and your own domain |
 | [Architecture](docs/ARCHITECTURE.md) | How languages and data contracts work together |
 | [Local ML and NLP](docs/LOCAL-ML.md) | Model training, search and limitations |
+| [Underwriting intelligence](docs/UNDERWRITING.md) | All 12 components, transaction learning and forecast evidence gates |
+| [Quick start](docs/QUICKSTART.md) | Steps from first import to settled outcomes and model validation |
 | [Benchmark](docs/BENCHMARK.md) | Generate, verify and bounded-import the full corpus |
 | [Knowledge](docs/KNOWLEDGE.md) | Vault structure, source evidence and profitable dispositions |
 | [Collector](services/collector/README.md) | Publisher endpoints, mappings and security |

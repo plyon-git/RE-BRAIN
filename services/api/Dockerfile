@@ -2,6 +2,7 @@ FROM python:3.12-slim
 WORKDIR /app
 COPY services/api /app/services/api
 COPY services/intelligence /app/services/intelligence
+COPY services/underwriting /app/services/underwriting
 COPY web /app/web
 COPY knowledge /app/knowledge
 RUN mkdir -p /app/data /app/runtime && useradd --uid 10001 --create-home brain && chown -R brain:brain /app

@@ -20,13 +20,15 @@ A local, editable real-estate operating knowledge base for 101XVC BRAIN. It is a
 - [[Markets map]]
 - [[Legal-Tax map]]
 - [[Data-ML map]]
+- [[Underwriting-Intelligence map]]
+- [[XVCbrain 12-component map]]
 - [[Templates map]]
 - [[Deal evidence map]]
 - [[Primary source index]]
 
 ## What is included
 
-158 original operational knowledge notes, 10 operating templates, 53 completed-transaction case records, and 66 linked primary references.
+182 original operational knowledge notes, 10 operating templates, 53 completed-transaction case records, and 70 linked primary references.
 
 Cases distinguish gross sales price, asset valuation, seller share, accounting gain, period aggregates, and non-cash contributions. The disclosed positive-gain selection is not a proof of complete net cash profitability. Original acquisition cost and complete cash flows remain unknown unless independently documented.
 

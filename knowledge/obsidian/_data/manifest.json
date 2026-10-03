@@ -3,8 +3,8 @@
   "name": "101XVC BRAIN Curated Real Estate Knowledge",
   "built_utc": "2026-10-03",
   "coverage": "US real estate operating foundation and selected issuer-reported completed positive-gain transactions; not exhaustive",
-  "source_count": 66,
-  "topic_count": 158,
+  "source_count": 70,
+  "topic_count": 182,
   "template_count": 10,
   "deal_count": 53,
   "positive_gain_measure": "reported accounting disposition gain; not complete net cash profitability",
@@ -1458,6 +1458,232 @@
       "source_ids": [
         "sklearn_text",
         "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-permanent-transaction-identity",
+      "title": "Permanent transaction identity",
+      "path": "11-Underwriting-Intelligence/Permanent transaction identity.md",
+      "source_ids": [
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-underwriting-evidence-acquisition",
+      "title": "Underwriting evidence acquisition",
+      "path": "11-Underwriting-Intelligence/Underwriting evidence acquisition.md",
+      "source_ids": [
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-local-value-and-repair-model",
+      "title": "Local value and repair model",
+      "path": "11-Underwriting-Intelligence/Local value and repair model.md",
+      "source_ids": [
+        "fnma_sales",
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-offer-negotiation-optimization",
+      "title": "Offer negotiation optimization",
+      "path": "11-Underwriting-Intelligence/Offer negotiation optimization.md",
+      "source_ids": [
+        "occ_cre",
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-seller-response-evidence",
+      "title": "Seller response evidence",
+      "path": "11-Underwriting-Intelligence/Seller response evidence.md",
+      "source_ids": [
+        "nist_playbook",
+        "sklearn_leakage"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-buyer-partner-liquidity",
+      "title": "Buyer partner liquidity",
+      "path": "11-Underwriting-Intelligence/Buyer partner liquidity.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-competing-closing-outcomes",
+      "title": "Competing closing outcomes",
+      "path": "11-Underwriting-Intelligence/Competing closing outcomes.md",
+      "source_ids": [
+        "survival_competing"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-intervention-queue",
+      "title": "Intervention queue",
+      "path": "11-Underwriting-Intelligence/Intervention queue.md",
+      "source_ids": [
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-versioned-transaction-rules",
+      "title": "Versioned transaction rules",
+      "path": "11-Underwriting-Intelligence/Versioned transaction rules.md",
+      "source_ids": [
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-transaction-portfolio-economics",
+      "title": "Transaction portfolio economics",
+      "path": "11-Underwriting-Intelligence/Transaction portfolio economics.md",
+      "source_ids": [
+        "occ_cre",
+        "cfpb_closing"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-learning-decision-ledger",
+      "title": "Learning decision ledger",
+      "path": "11-Underwriting-Intelligence/Learning decision ledger.md",
+      "source_ids": [
+        "nist_playbook",
+        "mlflow_registry"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-independent-underwriting-platform",
+      "title": "Independent underwriting platform",
+      "path": "11-Underwriting-Intelligence/Independent underwriting platform.md",
+      "source_ids": [
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-right-censoring",
+      "title": "Right censoring",
+      "path": "11-Underwriting-Intelligence/Right censoring.md",
+      "source_ids": [
+        "survival_competing"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-cash-receipt-lag",
+      "title": "Cash receipt lag",
+      "path": "11-Underwriting-Intelligence/Cash receipt lag.md",
+      "source_ids": [
+        "survival_competing",
+        "cfpb_closing"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-counterfactual-seller-acceptance",
+      "title": "Counterfactual seller acceptance",
+      "path": "11-Underwriting-Intelligence/Counterfactual seller acceptance.md",
+      "source_ids": [
+        "nist_playbook",
+        "sklearn_leakage"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-capacity-aware-acquisition",
+      "title": "Capacity aware acquisition",
+      "path": "11-Underwriting-Intelligence/Capacity aware acquisition.md",
+      "source_ids": [
+        "occ_cre"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-value-of-information",
+      "title": "Value of information",
+      "path": "11-Underwriting-Intelligence/Value of information.md",
+      "source_ids": [
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-marginal-marketing-allocation",
+      "title": "Marginal marketing allocation",
+      "path": "11-Underwriting-Intelligence/Marginal marketing allocation.md",
+      "source_ids": [
+        "occ_cre",
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-demand-deterioration-detection",
+      "title": "Demand deterioration detection",
+      "path": "11-Underwriting-Intelligence/Demand deterioration detection.md",
+      "source_ids": [
+        "nist_playbook"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-time-origin-and-landmark-forecasts",
+      "title": "Time origin and landmark forecasts",
+      "path": "11-Underwriting-Intelligence/Time origin and landmark forecasts.md",
+      "source_ids": [
+        "survival_competing"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-probability-calibration-audit",
+      "title": "Probability calibration audit",
+      "path": "11-Underwriting-Intelligence/Probability calibration audit.md",
+      "source_ids": [
+        "sklearn_calibration"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-temporal-evidence-availability",
+      "title": "Temporal evidence availability",
+      "path": "11-Underwriting-Intelligence/Temporal evidence availability.md",
+      "source_ids": [
+        "sklearn_leakage"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-settled-economics-reconciliation",
+      "title": "Settled economics reconciliation",
+      "path": "11-Underwriting-Intelligence/Settled economics reconciliation.md",
+      "source_ids": [
+        "cfpb_closing"
+      ],
+      "kind": "operational_knowledge"
+    },
+    {
+      "id": "note-model-promotion-gate",
+      "title": "Model promotion gate",
+      "path": "11-Underwriting-Intelligence/Model promotion gate.md",
+      "source_ids": [
+        "mlflow_registry",
+        "sklearn_calibration",
+        "sklearn_leakage"
       ],
       "kind": "operational_knowledge"
     },
@@ -3178,6 +3404,10 @@
     "sec_access",
     "energy",
     "energy_sample",
+    "survival_competing",
+    "sklearn_calibration",
+    "mlflow_registry",
+    "sklearn_leakage",
     "avb2024q3",
     "avb2023q3",
     "avb2022q3",
@@ -3205,5 +3435,68 @@
     "office_asset_sale": 1,
     "leasehold_interest_sale": 1,
     "joint_venture_non_cash_contribution": 2
-  }
+  },
+  "underwriting_requirements_map": "00-Start/XVCbrain 12-component map.md",
+  "underwriting_components": [
+    {
+      "number": 1,
+      "requirement": "Permanent property and transaction record",
+      "note_path": "11-Underwriting-Intelligence/Permanent transaction identity.md"
+    },
+    {
+      "number": 2,
+      "requirement": "Data acquisition and evidence engine",
+      "note_path": "11-Underwriting-Intelligence/Underwriting evidence acquisition.md"
+    },
+    {
+      "number": 3,
+      "requirement": "Local valuation and repair models",
+      "note_path": "11-Underwriting-Intelligence/Local value and repair model.md"
+    },
+    {
+      "number": 4,
+      "requirement": "Offer and negotiation optimizer",
+      "note_path": "11-Underwriting-Intelligence/Offer negotiation optimization.md"
+    },
+    {
+      "number": 5,
+      "requirement": "Seller response and follow-up intelligence",
+      "note_path": "11-Underwriting-Intelligence/Seller response evidence.md"
+    },
+    {
+      "number": 6,
+      "requirement": "Buyer and partner liquidity engine",
+      "note_path": "11-Underwriting-Intelligence/Buyer partner liquidity.md"
+    },
+    {
+      "number": 7,
+      "requirement": "Closing-time and failure models",
+      "note_path": "11-Underwriting-Intelligence/Competing closing outcomes.md"
+    },
+    {
+      "number": 8,
+      "requirement": "Execution and intervention engine",
+      "note_path": "11-Underwriting-Intelligence/Intervention queue.md"
+    },
+    {
+      "number": 9,
+      "requirement": "State, partner and contract rule engine",
+      "note_path": "11-Underwriting-Intelligence/Versioned transaction rules.md"
+    },
+    {
+      "number": 10,
+      "requirement": "Transaction economics and portfolio engine",
+      "note_path": "11-Underwriting-Intelligence/Transaction portfolio economics.md"
+    },
+    {
+      "number": 11,
+      "requirement": "Permanent learning ledger and model improvement",
+      "note_path": "11-Underwriting-Intelligence/Learning decision ledger.md"
+    },
+    {
+      "number": 12,
+      "requirement": "Independent operating platform",
+      "note_path": "11-Underwriting-Intelligence/Independent underwriting platform.md"
+    }
+  ]
 }

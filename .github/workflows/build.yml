@@ -1,0 +1,85 @@
+name: Build and package 101XVC BRAIN
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/benchmark/**'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: brain-build-main
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.23.x'
+          cache-dependency-path: services/collector/go.mod
+      - name: Verify Python, cross-language identities and browser syntax
+        run: |
+          python3 -m unittest discover -s tests -v
+          python3 services/resolver/tests/check_python_parity.py
+          node --check web/app.js
+          node --check web/brain.js
+      - name: Test Go collector
+        working-directory: services/collector
+        run: go test ./...
+      - name: Test and build Rust resolver
+        working-directory: services/resolver
+        run: |
+          cargo test --locked
+          cargo build --release --locked
+      - name: Test the real multi-service stack
+        run: |
+          (cd services/collector && go build -o /tmp/brain-collector .)
+          python3 scripts/integration.py --collector /tmp/brain-collector --resolver services/resolver/target/release/brain-resolver
+      - name: Install development browser checks
+        run: |
+          npm install --prefix /tmp/brain-browser playwright@1.62.1
+          node /tmp/brain-browser/node_modules/playwright/cli.js install --with-deps chromium
+      - name: Check actual browser workflows
+        env:
+          NODE_PATH: /tmp/brain-browser/node_modules
+        run: node scripts/browser-test.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: brain-browser-screenshots
+          path: artifacts/screenshots/
+          if-no-files-found: ignore
+  package:
+    needs: verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate and verify the complete benchmark
+        run: |
+          python3 scripts/benchmark.py --target-bytes 1073741824 --output data/benchmark --overwrite
+          python3 scripts/benchmark.py --verify --output data/benchmark
+      - name: Commit the complete data corpus
+        run: |
+          git config user.name '101XVC BRAIN Build'
+          git config user.email 'engineering@101xvc.com'
+          git add data/benchmark
+          if ! git diff --cached --quiet; then
+            git commit -m 'Install verified 1 GiB synthetic property evidence benchmark [skip ci]'
+            git push origin HEAD:main
+          fi
+      - name: Package full program and Obsidian giga-vault
+        run: python3 scripts/package.py
+      - name: Publish downloadable archives
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="brain-v1-${GITHUB_RUN_NUMBER}"
+          gh release create "$TAG" artifacts/* --target main --title '101XVC BRAIN standalone system and Obsidian vault' --notes 'Complete standalone source and over 1 GiB of clearly labeled synthetic load-test evidence. The vault includes original sourced knowledge notes and source-backed transaction case records with disclosed gains and explicit measurement limits. SHA256SUMS and PACKAGE-MANIFEST document exact sizes and checksums.'

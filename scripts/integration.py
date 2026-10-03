@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Exercise real independent services, persistence, evidence, NLP and ML."""
 import argparse
+import base64
 import json
 import os
 import socket
@@ -97,6 +98,49 @@ def main():
             knowledge=request('api','/api/knowledge?q=debt')
             assert knowledge['results'] and knowledge['method']=='local_tf_idf_cosine'
             checks.append('offline Obsidian TF-IDF retrieval through API')
+            episode=request('api','/api/brain/episodes',{'property_id':prop['id'],'id':'integration-episode',
+                'stage':'contracted','intake_date':'2026-09-01','contract_date':'2026-09-03',
+                'asking_price':180000,'partner_id':'DEMO Partner','synthetic':True})['episode']
+            episode_id=episode['id']
+            request('api',f'/api/brain/episodes/{episode_id}/decisions',{'id':'integration-decision',
+                'decision_at':'2026-09-01T12:00:00Z','prediction':{'closing_probability':None},
+                'recommendation':{'action':'Verify title'},'action':'Requested ownership documents',
+                'evidence_snapshot':{'features':{'sqft':1400,'assessed_value':200000,'offered_price':150000,
+                    'stage':'contracted','state':prop['state'],'county_fips':prop['county_fips']}},'model_versions':{},'synthetic':True})
+            offer={'id':'integration-offer','type':'offer','observed_at':'2026-09-02T12:00:00Z',
+                'available_at':'2026-09-02T12:00:00Z','payload':{'price':150000,'response':'accepted','terms':{'closing_days':30}}}
+            request('api',f'/api/brain/episodes/{episode_id}/events',offer)
+            request('api',f'/api/brain/episodes/{episode_id}/events',offer)
+            settlement={'type':'settlement','observed_at':'2026-09-22T12:00:00Z','available_at':'2026-09-22T12:00:00Z',
+                'payload':{'closed_at':'2026-09-20T12:00:00Z','gross_spread':40000,'partner_share':20000,
+                    'company_receipts':20000,'acquisition_costs':2500,'transaction_costs':1000,
+                    'cash_received_at':'2026-09-22T12:00:00Z','cash_received':20000,'synthetic':True}}
+            request('api',f'/api/brain/episodes/{episode_id}/events',settlement)
+            request('api',f'/api/brain/episodes/{episode_id}/events',{'type':'outcome',
+                'observed_at':'2026-09-22T12:00:00Z','available_at':'2026-09-22T12:00:00Z',
+                'payload':{'status':'closed','occurred_at':'2026-09-20T12:00:00Z','synthetic':True}})
+            ledger=request('api',f'/api/brain/episodes/{episode_id}')
+            assert len(ledger['offers'])==1 and len(ledger['decisions'])==1
+            assert ledger['current_settlement']['collected_cash']==20000
+            checks.append('permanent transaction events, idempotent offers, immutable decisions and settled cash')
+            report=request('api',f'/api/brain/report/{prop["id"]}?episode_id={episode_id}')
+            assert 'offer' in report and 'company_economics' in report and 'next_action' in report
+            assert request('api','/api/brain/portfolio') and request('api','/api/brain/queue')
+            checks.append('live underwriting report, portfolio economics and execution queue')
+            candidate=request('api','/api/brain/models/train',{'kind':'closing','synthetic':True})
+            assert candidate['synthetic'] and not candidate['gate']['eligible']
+            try:
+                request('api','/api/brain/models/promote',{'model_id':candidate['model_id']})
+                raise AssertionError('Synthetic underwriting model was promoted')
+            except HTTPError as exc:assert exc.code==400
+            checks.append('ledger-derived censored/outcome labels and synthetic model promotion refusal')
+            document=request('api','/api/documents',{'filename':'integration-title.txt','media_type':'text/plain',
+                'property_id':prop['id'],'episode_id':episode_id,
+                'content_base64':base64.b64encode(b'Synthetic title evidence fixture').decode()})
+            assert request('api','/api/documents')['items']
+            downloaded=request('api','/api/documents/'+document['id'])
+            assert base64.b64decode(downloaded['content_base64'])==b'Synthetic title evidence fixture'
+            checks.append('content-addressed linked document integrity and export')
             if args.resolver:
                 identity=request('resolver','/resolve',{'records':[{'county_fips':'48439','parcel_id':'000-012','address':'123 Main St','state':'TX'}]})
                 assert identity['results'][0]['property_id']=='48439-000012'

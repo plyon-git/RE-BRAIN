@@ -22,7 +22,8 @@ ROOT = Path(__file__).resolve().parents[1]
 APPROVED = {'sec.gov','investors.avalonbay.com','occ.gov','comptrollerofthecurrency.gov',
 'consumerfinance.gov','irs.gov','epa.gov','hud.gov','fema.gov','census.gov','fhfa.gov',
 'fanniemae.com','freddiemac.com','denvergov.org','trec.texas.gov','investor.gov','ftc.gov',
-'foia.gov','nist.gov','scikit-learn.org','rfc-editor.org','energystar.gov','federalreserve.gov'}
+'foia.gov','nist.gov','scikit-learn.org','rfc-editor.org','energystar.gov','federalreserve.gov',
+'scikit-survival.readthedocs.io','mlflow.org'}
 
 
 def valid_url(url, resolve=True):

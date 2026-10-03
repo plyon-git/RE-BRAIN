@@ -530,6 +530,46 @@
     "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
   },
   {
+    "id": "survival_competing",
+    "title": "Analysis of Competing Risks",
+    "url": "https://scikit-survival.readthedocs.io/en/stable/user_guide/competing-risks.html",
+    "publisher": "scikit-survival",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "sklearn_calibration",
+    "title": "Probability Calibration",
+    "url": "https://scikit-learn.org/stable/modules/calibration.html",
+    "publisher": "scikit-learn",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "mlflow_registry",
+    "title": "ML Model Registry",
+    "url": "https://mlflow.org/docs/latest/ml/model-registry/",
+    "publisher": "MLflow",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
+    "id": "sklearn_leakage",
+    "title": "Common Pitfalls and Recommended Practices",
+    "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+    "publisher": "scikit-learn",
+    "locator": "",
+    "accessed_utc": "2026-10-03",
+    "evidence_status": "web_verified",
+    "redistribution": "Original summaries and selected factual fields only; full source text is not bundled."
+  },
+  {
     "id": "avb2024q3",
     "title": "AvalonBay 2024 Q3 Form 10-Q",
     "url": "https://www.sec.gov/Archives/edgar/data/915912/000091591224000021/avb-20240930.htm",
