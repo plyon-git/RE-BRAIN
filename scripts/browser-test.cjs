@@ -25,7 +25,7 @@ const delay = ms => new Promise(resolve=>setTimeout(resolve,ms));
     if(process.env.BRAIN_CHROME_PATH)options.executablePath=process.env.BRAIN_CHROME_PATH;
     browser=await chromium.launch(options);
     const page=await browser.newPage({viewport:{width:1440,height:1000}});
-    const errors=[];page.on('pageerror',e=>{errors.push(e.message);console.error('Browser error:',e.message);});
+    const errors=[];page.on('pageerror',e=>{errors.push(e.message);console.error('Browser error:',e.stack||e.message);});
     page.on('console',m=>{if(m.type()==='error')console.error('Browser console:',m.text());});
     page.on('requestfailed',r=>console.error('Browser request:',r.url(),r.failure()?.errorText));
     await page.goto(url);

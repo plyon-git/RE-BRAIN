@@ -57,6 +57,8 @@ The bundled ML reference uses synthetic labels and is identified accordingly. Tr
 ```bash
 python3 -m unittest discover -s tests -v
 python3 services/resolver/tests/check_python_parity.py
+node --input-type=module --check < web/app.js
+node --input-type=module --check < web/brain.js
 (cd services/collector && go test -race ./...)
 (cd services/resolver && cargo test --locked)
 python3 scripts/integration.py --collector /path/to/brain-collector --resolver services/resolver/target/release/brain-resolver

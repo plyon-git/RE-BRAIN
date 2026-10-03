@@ -26,8 +26,8 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -v
           python3 services/resolver/tests/check_python_parity.py
-          node --check web/app.js
-          node --check web/brain.js
+          node --input-type=module --check < web/app.js
+          node --input-type=module --check < web/brain.js
       - name: Test Go collector
         working-directory: services/collector
         run: go test ./...

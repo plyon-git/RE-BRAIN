@@ -377,7 +377,16 @@ async function openProperty(id) {
 function renderEvidence(row) {
   const payload=row._raw_record || row.raw_record || row.payload || row.record || row.data || row.attributes || {};
   const fields=row.fields || row.normalized || row.normalized_fields || row.values || row.attributes;
-  const node=element('article',{class:'evidence-card'},element('div',{class:'evidence-card-head'},element('b',{text:row.source_name || row.source?.name || state.sources.find(source=>source.id===row.source_id)?.name || row.source_id || 'Evidence source'}),tag(textValue(row.category || row.source?.category,'record').toUpperCase(),'muted')),element('small',{text:`Recorded ${date(row.observed_at || row.created_at || row.ingested_at)}${row.confidence!=null ? ` · confidence ${(number(row.confidence)*100).toFixed(0)}%` : ''}`));
+  const sourceName = row.source_name || row.source?.name || state.sources.find(source=>source.id===row.source_id)?.name || row.source_id || 'Evidence source';
+  const category = textValue(row.category || row.source?.category,'record').toUpperCase();
+  const confidence = row.confidence!=null ? ` · confidence ${(number(row.confidence)*100).toFixed(0)}%` : '';
+  const node = element('article', {class:'evidence-card'},
+    element('div', {class:'evidence-card-head'},
+      element('b', {text:sourceName}),
+      tag(category,'muted')
+    ),
+    element('small', {text:`Recorded ${date(row.observed_at || row.created_at || row.ingested_at)}${confidence}`})
+  );
   if(row.source_url || row.url) node.append(safeLink(row.source_url || row.url,'Open original source ↗',{class:'text-link'}));
   if(fields) node.append(element('div',{class:'evidence-fields'},(Array.isArray(fields) ? fields : Object.keys(fields)).slice(0,20).map(field=>element('span',{class:'field-pill',text:typeof field==='object' ? field.field || JSON.stringify(field) : field}))));
   node.append(element('details',{},element('summary',{class:'form-note',text:'View original evidence'}),element('pre',{class:'detail-mono',text:typeof payload==='string' ? payload : JSON.stringify(payload,null,2)})));

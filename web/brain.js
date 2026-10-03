@@ -88,7 +88,30 @@ function metric(title,value){return node('div',{class:'central-metric'},node('sp
 function reportCard(eyebrow,title,...content){return node('article',{class:'report-card'},node('p',{class:'eyebrow',text:eyebrow}),node('h3',{text:title}),...content);}
 function missing(values){if(!values||!values.length)return null;return node('p',{class:'report-missing',text:`Missing evidence: ${Array.isArray(values)?values.map(value=>written(value)).join('; '):written(values)}`});}
 function renderConstraints(constraints){return node('div',{},line('Cash constraint',label(constraints.cash_status||'not configured')),line('Execution capacity',label(constraints.capacity_status||'not configured')),constraints.missing_required_documents?.length?missing(constraints.missing_required_documents):null,advanced('Inspect all acquisition constraints',constraints));}
-function renderScenarioComparison(report,baseline){const pairs=[['Acquisition ceiling',baseline?.offer?.maximum,report.offer?.maximum],['Retained fee',baseline?.company_economics?.retained_fee,report.company_economics?.retained_fee],['Contribution',baseline?.company_economics?.contribution,report.company_economics?.contribution],['Expected contribution',baseline?.company_economics?.expected_contribution,report.company_economics?.expected_contribution]];return node('article',{class:'panel scenario-comparison'},node('div',{class:'panel-heading'},node('div',{},node('p',{class:'eyebrow',text:'CURRENT EVIDENCE / YOUR SCENARIO'}),node('h2',{text:'Compare the decision'}))),node('div',{class:'table-wrap'},node('table',{},node('thead',{},node('tr',{},node('th',{text:'OUTPUT'}),node('th',{text:'CURRENT EVIDENCE'}),node('th',{text:'SCENARIO'}),node('th',{text:'CHANGE'}))),node('tbody',{},pairs.map(([title,before,after])=>node('tr',{},node('td',{text:title}),node('td',{text:cash(before)}),node('td',{text:cash(after)}),node('td',{text:before==null||after==null?'Not established':cash(after-before)}))))));}
+function renderScenarioComparison(report,baseline) {
+  const pairs = [
+    ['Acquisition ceiling',baseline?.offer?.maximum,report.offer?.maximum],
+    ['Retained fee',baseline?.company_economics?.retained_fee,report.company_economics?.retained_fee],
+    ['Contribution',baseline?.company_economics?.contribution,report.company_economics?.contribution],
+    ['Expected contribution',baseline?.company_economics?.expected_contribution,report.company_economics?.expected_contribution]
+  ];
+  const header = node('thead', {}, node('tr', {},
+    ...['OUTPUT','CURRENT EVIDENCE','SCENARIO','CHANGE'].map(title=>node('th',{text:title}))
+  ));
+  const body = node('tbody', {}, pairs.map(([title,before,after]) => node('tr', {},
+    node('td',{text:title}),
+    node('td',{text:cash(before)}),
+    node('td',{text:cash(after)}),
+    node('td',{text:before==null||after==null?'Not established':cash(after-before)})
+  )));
+  return node('article', {class:'panel scenario-comparison'},
+    node('div', {class:'panel-heading'}, node('div', {},
+      node('p',{class:'eyebrow',text:'CURRENT EVIDENCE / YOUR SCENARIO'}),
+      node('h2',{text:'Compare the decision'})
+    )),
+    node('div', {class:'table-wrap'}, node('table', {}, header, body))
+  );
+}
 function rangeText(range){if(!range)return 'Not established';if(Array.isArray(range))return range.length>=2?`${cash(range[0])} to ${cash(range[1])}`:'Not established';if(typeof range==='object'){const low=range.low??range.lower??range.min,high=range.high??range.upper??range.max;return low==null&&high==null?'Not established':`${cash(low)} to ${cash(high)}`;}return written(range);}
 function renderTimeline(timeline){if(!timeline||!Object.keys(timeline).length)return note('Closing-time model is not established. Record dated outcomes and keep open episodes censored.');return node('div',{class:'table-wrap'},node('table',{class:'report-timeline'},node('thead',{},node('tr',{},...['WINDOW','CLOSED','CANCELLED','EXPIRED','OPEN'].map(title=>node('th',{text:title})))),node('tbody',{},Object.entries(timeline).map(([days,value])=>node('tr',{},node('td',{text:`${days} days`}),...['closed','cancelled','expired','still_open'].map(key=>node('td',{text:percent(value?.[key])})))))));}
 function createScenarioPanel(){
