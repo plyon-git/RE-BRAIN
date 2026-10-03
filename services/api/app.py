@@ -750,7 +750,9 @@ def handler_for(store, web_root=None):
                     return
                 raw = candidate.read_bytes()
                 self.send_response(200)
-                self.send_header("Content-Type",mimetypes.guess_type(candidate.name)[0] or "application/octet-stream")
+                web_types = {".js": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8",
+                             ".html": "text/html; charset=utf-8", ".json": "application/json; charset=utf-8"}
+                self.send_header("Content-Type",web_types.get(candidate.suffix.lower()) or mimetypes.guess_type(candidate.name)[0] or "application/octet-stream")
                 self.send_header("Content-Length",str(len(raw)))
                 self.send_header("X-Content-Type-Options","nosniff")
                 self.send_header("Content-Security-Policy","default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self'; connect-src 'self'")

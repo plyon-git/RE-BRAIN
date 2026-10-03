@@ -196,6 +196,11 @@ class BrainStoreTest(unittest.TestCase):
             thread.start()
             base = "http://127.0.0.1:"+str(server.server_address[1])
             try:
+                with patch.object(api.mimetypes,'guess_type',return_value=('application/octet-stream',None)):
+                    with urllib.request.urlopen(base+'/app.js') as response:
+                        self.assertEqual(response.headers.get_content_type(),'text/javascript')
+                    with urllib.request.urlopen(base+'/brain.js') as response:
+                        self.assertEqual(response.headers.get_content_type(),'text/javascript')
                 with urllib.request.urlopen(base+"/api/health") as response:
                     self.assertEqual(json.load(response)["status"],"ok")
                 with self.assertRaises(urllib.error.HTTPError) as raised:
