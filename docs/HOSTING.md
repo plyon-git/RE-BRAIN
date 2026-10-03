@@ -21,7 +21,7 @@ docker compose up --build -d
 docker compose logs -f
 ```
 
-Open http://127.0.0.1:8080 and enter the Bearer token in the interface. Compose runs Python API, Go collectors, Rust resolver, Python ML/NLP and the browser interface. Persisted Docker volumes survive container recreation. API startup may briefly precede the optional services becoming ready; retry a collector job after all four services are healthy.
+Open http://127.0.0.1:8080 and enter the Bearer token in the interface. Compose runs Python API, Go collectors, Rust resolver, Python ML/NLP and the browser interface. Health checks gate API startup until its private services are ready. Persisted Docker volumes survive container recreation.
 
 ## Publish on your own infrastructure
 

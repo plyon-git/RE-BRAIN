@@ -16,9 +16,18 @@ services:
     volumes:
       - brain-runtime:/app/runtime
     depends_on:
-      - collector
-      - resolver
-      - intelligence
+      collector:
+        condition: service_healthy
+      resolver:
+        condition: service_healthy
+      intelligence:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/api/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      start_period: 5s
+      retries: 12
     restart: unless-stopped
   collector:
     build: services/collector
@@ -26,12 +35,24 @@ services:
       COLLECTOR_PORT: 8081
       BRAIN_API_KEY: ${BRAIN_API_KEY}
       COLLECTOR_ALLOWED_HOSTS: ${COLLECTOR_ALLOWED_HOSTS:-services.arcgis.com}
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O - http://127.0.0.1:8081/health || exit 1"]
+      interval: 5s
+      timeout: 3s
+      start_period: 5s
+      retries: 12
     restart: unless-stopped
   resolver:
     build: services/resolver
     environment:
       BRAIN_RESOLVER_PORT: 8082
       BRAIN_API_KEY: ${BRAIN_API_KEY}
+    healthcheck:
+      test: ["CMD", "brain-resolver", "--healthcheck"]
+      interval: 5s
+      timeout: 3s
+      start_period: 5s
+      retries: 12
     restart: unless-stopped
   intelligence:
     build:
@@ -43,6 +64,12 @@ services:
       BRAIN_VAULT: /app/knowledge/obsidian
     volumes:
       - intelligence-runtime:/app/runtime
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8083/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      start_period: 5s
+      retries: 12
     restart: unless-stopped
 volumes:
   brain-runtime:
